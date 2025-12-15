@@ -37,5 +37,10 @@ export default function Home() {
         Instagram: <strong>@nehuen_fit</strong>
       </p>
     </main>
+    <img
+  src="/logo.png"
+  alt="Nehuen Fit"
+  style={{ width: "150px", marginBottom: "20px" }}
+/>
   );
 }

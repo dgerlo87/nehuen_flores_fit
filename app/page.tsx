@@ -48,7 +48,7 @@ export default function Home() {
           gap: '15px', 
       }}>
           
-          {/* BOTÓN DE WHATSAPP (Teléfono) */}
+          {/* BOTÓN DE WHATSAPP (Icono: Teléfono) */}
           <a 
             href={whatsappLink} 
             target="_blank" 
@@ -57,7 +57,7 @@ export default function Home() {
               display: 'inline-block',
               backgroundColor: '#25D366', // Verde de WhatsApp
               padding: '12px 14px',
-              borderRadius: '50%', 
+              borderRadius: '50%', // Circular
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)', 
               lineHeight: '1',
               fontSize: '28px',
@@ -66,23 +66,24 @@ export default function Home() {
             📞 
           </a>
 
-          {/* BOTÓN DE INSTAGRAM (Icono más parecido al logo) */}
+          {/* BOTÓN DE INSTAGRAM (Icono: Cámara y Degradado) */}
           <a 
             href={instagramLink} 
             target="_blank" 
             rel="noopener noreferrer" 
             style={{
               display: 'inline-block',
-              // Degradado de colores de Instagram (como alternativa al color sólido)
+              // Degradado de colores de Instagram
               background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
               padding: '12px 14px',
-              borderRadius: '50%', 
+              // Borde más cuadrado (para parecerse al logo)
+              borderRadius: '30%', 
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)', 
               lineHeight: '1',
               fontSize: '28px',
             }}
           >
-            🏠 
+            📸 
           </a>
       </div>
       

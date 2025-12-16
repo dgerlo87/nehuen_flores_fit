@@ -10,7 +10,7 @@ export default function Home() {
         // **********************************
         // PROPIEDADES PARA LA IMAGEN DE FONDO
         // **********************************
-        backgroundImage: 'url("/fondo_gimnasio.jpg")', // ¡CAMBIA ESTO por el nombre de tu archivo!
+        backgroundImage: 'IMG-20251215-WA0059.jpg', // ¡CAMBIA ESTO por el nombre de tu archivo!
         backgroundSize: 'cover', // Asegura que la imagen cubra todo el espacio
         backgroundPosition: 'center', // Centra la imagen
         backgroundAttachment: 'fixed' // Fija la imagen mientras el contenido se desplaza

@@ -6,7 +6,7 @@ export default function Home() {
         textAlign: 'center', 
         marginTop: '50px', 
         minHeight: '100vh', 
-        backgroundColor: '#7FFF00' // Aquí puedes cambiar el color
+        backgroundColor: '#87CEEB' // Aquí puedes cambiar el color
     }}>
       
       {/* EL LOGO */}

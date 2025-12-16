@@ -15,4 +15,6 @@ export default function Home() {
       <h1>Bienvenido a mi página de fitness</h1>
       <p>¡Vamos a crear contenido increíble!</p>
     </div>
-  );
+    );
+}
+  

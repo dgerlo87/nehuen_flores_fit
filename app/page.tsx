@@ -18,7 +18,7 @@ export default function Home() {
       
       {/* EL LOGO (Aumentamos el tamaño) */}
       <img
-          src="/IMG-20251215-WA0048.jpg"
+          src="/IMG-20251216-WA0001.jpg"
           alt="Mi logo de fitness"
           width={200} // Aumentamos el tamaño del logo
           style={{ marginBottom: '40px' }} // Espacio debajo del logo

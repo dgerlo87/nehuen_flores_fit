@@ -2,7 +2,45 @@
 
 "use client"; 
 
-// --- COMPONENTE DEL FORMULARIO (Preparado para Formspree) ---
+// --- COMPONENTE DE PRESENTACIÓN (Acerca de Mí) ---
+const AboutSection = () => {
+    return (
+        <div style={{ 
+            maxWidth: '500px', 
+            margin: '40px auto', 
+            padding: '30px', 
+            backgroundColor: 'rgba(255, 255, 255, 0.1)', // Fondo blanco muy sutil y transparente
+            borderRadius: '15px', 
+            boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
+            textAlign: 'left',
+            color: 'white', // Texto blanco
+            backdropFilter: 'blur(3px)', // Efecto de desenfoque para mejorar la lectura
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+        }}>
+            <h2 style={{ 
+                color: '#fff', 
+                fontSize: '1.8em', 
+                marginBottom: '15px',
+                borderBottom: '2px solid #007bff', // Línea de separación azul
+                paddingBottom: '10px'
+            }}>
+                💪 Conoce a Nehuen Flores
+            </h2>
+            <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
+                ¡Hola! Soy **Nehuen Flores**, tu entrenador de fitness comprometido con ayudarte a alcanzar tu mejor versión. Con años de experiencia y una pasión inquebrantable por la transformación física, mi misión es simple: **hacer que el fitness funcione para ti**.
+            </p>
+            <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
+                Me especializo en crear rutinas **totalmente personalizadas** que se ajustan a tu estilo de vida, nivel y objetivos específicos, ya sea que busques ganar músculo, perder peso o mejorar tu rendimiento atlético.
+            </p>
+            <p style={{ fontWeight: 'bold', lineHeight: '1.6' }}>
+                Mi compromiso es con tu **progreso real**. ¡Envíame tu solicitud y comencemos a construir la rutina que te llevará al éxito!
+            </p>
+        </div>
+    );
+};
+// ------------------------------
+
+// --- COMPONENTE DEL FORMULARIO (Mantenemos el endpoint de Formspree) ---
 const RequestForm = () => {
     // Estilos internos
     const inputStyle = { width: '100%', padding: '12px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '8px', boxSizing: 'border-box' as 'border-box', backgroundColor: 'rgba(255, 255, 255, 0.9)', color: '#333', };
@@ -14,7 +52,7 @@ const RequestForm = () => {
                 Solicita tu Rutina Personalizada
             </h2>
             
-            {/* ✅ FORMULARIO CONECTADO A TU ENDPOINT DE FORMSPREE */}
+            {/* Formulario conectado a tu endpoint de Formspree */}
             <form action="https://formspree.io/f/2893391712229522962" method="POST">
                 <input type="text" name="Nombre" placeholder="Tu Nombre Completo" required style={inputStyle} />
                 <textarea name="Objetivo" placeholder="Describe tu objetivo (perder peso, ganar músculo, etc.)" required rows={4} style={{ ...inputStyle, resize: 'vertical' as 'vertical' }} />
@@ -57,6 +95,9 @@ export default function Home() {
             <p style={{ color: 'white', fontSize: '1.2em' }}>
                 ¡Vamos a crear contenido increíble!
             </p>
+
+            {/* ✅ NUEVA SECCIÓN: PRESENTACIÓN DE NEHUEN */}
+            <AboutSection />
 
             {/* RENDERIZADO DEL FORMULARIO */}
             <RequestForm />

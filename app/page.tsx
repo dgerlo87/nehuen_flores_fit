@@ -7,7 +7,7 @@ export default function Home() {
       {/* 1. EL LOGO CORREGIDO */}
       {/* Usamos <img> simple y la ruta correcta desde la carpeta public */}
       <img
-          src="/IMG_20251215-WA0048.JPG" // <-- La ruta de tu nuevo logo
+          src="IMG-20251215-WA0048.jpg" // <-- La ruta de tu nuevo logo
           alt="Mi logo de fitness"
           width={150}
       />

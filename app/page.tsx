@@ -42,5 +42,14 @@ export default function Home() {
   alt="Nehuen Fit"
   style={{ width: "150px", marginBottom: "20px" }}
 />
+export default function Home() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <img src="/logo.png" alt="Mi logo" width={150} />
+      <h1>Bienvenido a mi página de fitness</h1>
+      <p>¡Vamos a crear contenido increíble!</p>
+    </div>
+  );
+}
   );
 }

@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div style={{ 
         textAlign: 'center', 
-        paddingTop: '50px', 
+        paddingTop: '10vh', // Damos más espacio arriba para bajar el contenido
         minHeight: '100vh', 
         backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', 
         backgroundSize: 'cover', 
@@ -16,24 +16,30 @@ export default function Home() {
         backgroundAttachment: 'fixed' 
     }}>
       
-      {/* CONTENIDO PRINCIPAL (Logo y Texto) */}
+      {/* EL LOGO (Aumentamos el tamaño) */}
       <img
           src="/IMG-20251215-WA0048.jpg"
           alt="Mi logo de fitness"
-          width={150}
-          style={{ marginBottom: '20px' }}
+          width={200} // Aumentamos el tamaño del logo
+          style={{ marginBottom: '40px' }} // Espacio debajo del logo
       />
-      <h1 style={{ color: 'white', marginTop: '30px' }}>Bienvenido a mi página de fitness</h1>
-      <p style={{ color: 'white' }}>¡Vamos a crear contenido increíble!</p>
+      
+      {/* TEXTO DE LA PÁGINA */}
+      <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px' }}>
+        Bienvenido a mi página de fitness
+      </h1>
+      <p style={{ color: 'white', fontSize: '1.2em' }}>
+        ¡Vamos a crear contenido increíble!
+      </p>
       
       {/* ********************************** */}
-      {/* CONTENEDOR FLOTANTE DEL BOTÓN */}
+      {/* BOTÓN FLOTANTE DE WHATSAPP (SOLO EMOJI) */}
       {/* ********************************** */}
       <div style={{
-          position: 'fixed',   // Fija la posición en la ventana
-          bottom: '20px',      // 20px desde la parte inferior
-          right: '20px',       // 20px desde la derecha
-          zIndex: 1000,        // Asegura que esté por encima de otros elementos
+          position: 'fixed',
+          bottom: '25px',      
+          right: '25px',       
+          zIndex: 1000,
       }}>
           <a 
             href={whatsappLink} 
@@ -42,21 +48,16 @@ export default function Home() {
             style={{
               display: 'inline-block',
               backgroundColor: '#25D366', // Color de WhatsApp
-              padding: '10px', 
+              padding: '12px 14px', // Tamaño para que parezca un círculo
               textDecoration: 'none',
               borderRadius: '50%', // Botón circular
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)', // Sombra más pronunciada
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)', 
               lineHeight: '1',
-              transition: 'transform 0.3s ease', // Animación de mouse over
+              fontSize: '28px', // Icono grande
             }}
           >
-            <img
-                src="/Logotipo.png" 
-                alt="Logo de WhatsApp"
-                width={30} 
-                height={30}
-                style={{ display: 'block' }}
-            />
+            {/* Usamos el EMOJI de teléfono que funciona siempre */}
+            📞 
           </a>
       </div>
       
@@ -64,8 +65,3 @@ export default function Home() {
   );
 }
 
-
-
-
-
-  

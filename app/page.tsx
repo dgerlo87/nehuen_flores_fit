@@ -5,8 +5,8 @@ export default function Home() {
   const whatsappNumber = '5491172145711'; 
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   
-  // ¡IMPORTANTE! CAMBIA ESTO por el usuario real de Instagram.
-  const instagramLink = 'https://www.instagram.com/[fitnes_nehuen]'; 
+  // Enlace de Instagram al perfil Fitnes_nehuen
+  const instagramLink = 'https://www.instagram.com/Fitnes_nehuen'; 
   
   return (
     <div style={{ 
@@ -20,7 +20,7 @@ export default function Home() {
         backgroundAttachment: 'fixed' 
     }}>
       
-      {/* EL LOGO PRINCIPAL (RUTA ACTUALIZADA) */}
+      {/* EL LOGO PRINCIPAL */}
       <img
           src="/IMG-20251216-WA0001.jpg" 
           alt="Mi logo de fitness"
@@ -66,14 +66,15 @@ export default function Home() {
             📞 
           </a>
 
-          {/* BOTÓN DE INSTAGRAM (Cámara) */}
+          {/* BOTÓN DE INSTAGRAM (Icono más parecido al logo) */}
           <a 
             href={instagramLink} 
             target="_blank" 
             rel="noopener noreferrer" 
             style={{
               display: 'inline-block',
-              backgroundColor: '#E4405F', // Color de Instagram
+              // Degradado de colores de Instagram (como alternativa al color sólido)
+              background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
               padding: '12px 14px',
               borderRadius: '50%', 
               boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)', 
@@ -81,7 +82,7 @@ export default function Home() {
               fontSize: '28px',
             }}
           >
-            📸 
+            🏠 
           </a>
       </div>
       

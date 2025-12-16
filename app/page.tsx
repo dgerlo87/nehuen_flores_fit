@@ -6,7 +6,7 @@ export default function Home() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   
   // ¡IMPORTANTE! CAMBIA ESTO por el usuario real de Instagram.
-  const instagramLink = 'https://www.instagram.com/[TU_USUARIO_INSTAGRAM]'; 
+  const instagramLink = 'https://www.instagram.com/[fitnes_nehuen]'; 
   
   return (
     <div style={{ 

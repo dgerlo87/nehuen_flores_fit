@@ -11,7 +11,7 @@ export default function Home() {
       
       {/* EL LOGO */}
       <img
-          src="/IMG-20251215-WA0048.jpg
+          src="/IMG-20251215-WA0048.jpg"
           alt="Mi logo de fitness"
           width={150}
       />

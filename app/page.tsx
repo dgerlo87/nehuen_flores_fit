@@ -1,5 +1,7 @@
 // app/page.tsx
 
+"use client"; // <--- ESTO SOLUCIONA EL ERROR
+
 import React, { useState } from 'react';
 
 // --- COMPONENTE DEL FORMULARIO ---
@@ -20,14 +22,9 @@ const RequestForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // --- LÓGICA DE ENVÍO DE DATOS ---
-    // En un entorno real, aquí enviarías formData a un servicio (ej: Formspree, API, etc.)
-    
+    // Aquí puedes enviar los datos a un servicio de formularios (Formspree, etc.)
     console.log('Datos del formulario enviados:', formData);
-    alert(`¡Gracias por tu solicitud, ${formData.name}! Te contactaremos pronto. (Los datos se enviaron a la consola)`);
-    
-    // Aquí puedes resetear el formulario si lo deseas
-    // setFormData({ name: '', goal: '', contact: '' });
+    alert(`¡Gracias por tu solicitud, ${formData.name}! Te contactaremos pronto.`);
   };
 
   const inputStyle = {
@@ -37,13 +34,13 @@ const RequestForm = () => {
     border: '1px solid #ccc',
     borderRadius: '8px',
     boxSizing: 'border-box' as 'border-box',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Fondo ligeramente transparente
+    backgroundColor: 'rgba(255, 255, 255, 0.9)', 
     color: '#333',
   };
 
   const buttonStyle = {
     width: '100%',
-    backgroundColor: '#007bff', // Azul brillante
+    backgroundColor: '#007bff', 
     color: 'white',
     padding: '14px 20px',
     margin: '10px 0',
@@ -107,7 +104,7 @@ export default function Home() {
     <div style={{ 
         textAlign: 'center', 
         paddingTop: '10vh', 
-        paddingBottom: '50px', // Espacio abajo para que el formulario no choque con el borde
+        paddingBottom: '50px', 
         minHeight: '100vh', 
         backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', 
         backgroundSize: 'cover', 

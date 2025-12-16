@@ -1,3 +1,4 @@
+
 // app/page.tsx
 
 "use client"; 
@@ -91,10 +92,13 @@ const FitnessTipsSection = () => {
             </ul>
         </div>
     );
-};
+}; // <-- ¡LLAVE FINAL VERIFICADA!
 // ------------------------------
 
 
 // --- 🌟 COMPONENTE DE TESTIMONIOS ---
 const TestimonialsSection = () => {
-
+    // ⚠️ REEMPLAZAR ESTOS TESTIMONIOS FICTICIOS POR LOS REALES DE NEHUEN
+    const testimonials = [
+        { 
+            quote: "En solo 8 semanas, perdí 5 kg y mi energía se disparó. La rutina de Nehuen es adaptable y nunca aburrida

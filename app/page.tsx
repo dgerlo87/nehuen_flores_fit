@@ -1,6 +1,83 @@
+
 // app/page.tsx
 
 "use client"; 
+
+// --- 🌟 COMPONENTE DE TESTIMONIOS ---
+const TestimonialsSection = () => {
+    // ⚠️ REEMPLAZAR ESTOS TESTIMONIOS FICTICIOS POR LOS REALES DE NEHUEN
+    const testimonials = [
+        { 
+            quote: "En solo 8 semanas, perdí 5 kg y mi energía se disparó. La rutina de Nehuen es adaptable y nunca aburrida. ¡Lo recomiendo 100%!", 
+            name: "— Martina S." 
+        },
+        { 
+            quote: "Nunca pensé que un entrenamiento en casa sería tan efectivo. Gané músculo en los brazos y espalda. Nehuen me dio la motivación que necesitaba.", 
+            name: "— Javier P." 
+        },
+        { 
+            quote: "Su plan de nutrición y ejercicio cambió completamente mi estilo de vida. La atención personalizada marca la diferencia.", 
+            name: "— Sofía R." 
+        },
+    ];
+
+    const containerStyle = {
+        maxWidth: '900px', 
+        margin: '40px auto', 
+        padding: '30px', 
+        backgroundColor: 'rgba(255, 255, 255, 0.2)', // Fondo blanco más brillante y transparente
+        borderRadius: '15px', 
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
+        textAlign: 'center' as 'center',
+        color: 'white', 
+        backdropFilter: 'blur(3px)', 
+        border: '1px solid rgba(255, 255, 255, 0.3)'
+    };
+    
+    const gridStyle = {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: '20px',
+        marginTop: '20px',
+    };
+
+    const cardStyle = {
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        padding: '20px',
+        borderRadius: '10px',
+        textAlign: 'left' as 'left',
+    };
+
+    const quoteStyle = {
+        fontStyle: 'italic',
+        fontSize: '1em',
+        marginBottom: '10px',
+    };
+
+    const nameStyle = {
+        fontWeight: 'bold' as 'bold',
+        color: '#007bff',
+        fontSize: '0.9em',
+    };
+
+    return (
+        <div style={containerStyle}>
+            <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '30px', borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
+                ⭐ Historias de Éxito
+            </h2>
+            <div style={gridStyle}>
+                {testimonials.map((t, index) => (
+                    <div key={index} style={cardStyle}>
+                        <p style={quoteStyle}>"{t.quote}"</p>
+                        <p style={nameStyle}>{t.name}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+// ------------------------------
+
 
 // --- 🎬 COMPONENTE DE SECCIÓN DE VIDEOS ---
 const VideoSection = () => {
@@ -168,6 +245,9 @@ export default function Home() {
             {/* SECCIÓN DE PRESENTACIÓN */}
             <AboutSection />
 
+            {/* ✅ NUEVA SECCIÓN: TESTIMONIOS */}
+            <TestimonialsSection />
+
             {/* SECCIÓN DE VIDEOS */}
             <VideoSection />
 
@@ -201,4 +281,3 @@ export default function Home() {
         </div>
     );
 }
-

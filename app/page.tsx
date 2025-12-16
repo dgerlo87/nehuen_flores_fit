@@ -101,13 +101,24 @@ const TestimonialsSection = () => {
     // ⚠️ REEMPLAZAR ESTOS TESTIMONIOS FICTICIOS POR LOS REALES DE NEHUEN
     const testimonials = [
         { 
-            quote: "En solo 8 semanas, perdí 5 kg y mi energía se disparó. La rutina de Nehuen es adaptable y nunca aburrida. ¡Lo recomiendo 100%!",
-                                                                                                                                name: "_ Martina S."
-                                                                                                                                      },
+            quote: "En solo 8 semanas, perdí 5 kg y mi energía se disparó. La rutina de Nehuen es adaptable y nunca aburrida. ¡Lo recomiendo 100%!", 
+            name: "— Martina S." 
+        },
         { 
             quote: "Nunca pensé que un entrenamiento en casa sería tan efectivo. Gané músculo en los brazos y espalda. Nehuen me dio la motivación que necesitaba.", 
             name: "— Javier P." 
         },
-        // ... (resto de las citas)
+        { 
+            quote: "Su plan de nutrición y ejercicio cambió completamente mi estilo de vida. La atención personalizada marca la diferencia.", 
+            name: "— Sofía R." 
+        }, // <--- ¡Asegúrate que esta llave y coma estén aquí!
     ];
-         
+
+    const containerStyle = {
+        // ... (resto de los estilos)
+    };
+    
+    // ... (resto del componente)
+};
+// ------------------------------
+

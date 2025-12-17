@@ -15,7 +15,6 @@ const NutritionTipsSection = () => (
         <p>• Proteína en cada comida: Esencial para la saciedad y el músculo.</p>
         <p>• Grasas saludables: Palta, nueces y aceite de oliva.</p>
         <p>• Evita azúcares añadidos y procesados.</p>
-        <p>• Fibra: Consume granos integrales para mejor digestión.</p>
     </div>
 );
 
@@ -26,14 +25,14 @@ const FitnessTipsSection = () => (
         backgroundColor: 'rgba(0, 0, 0, 0.4)', borderRadius: '15px', 
         color: 'white', textAlign: 'left', border: '1px solid rgba(255,255,255,0.1)' 
     }}>
-        <h2 style={{ borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>💡 Consejos Fitness</h2>
+        <h2 style={{ borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>💡 Fitness</h2>
         <p>• Prioriza el sueño (7-9 horas).</p>
         <p>• Mantente hidratado antes y después del entrenamiento.</p>
         <p>• La consistencia siempre supera a la intensidad esporádica.</p>
     </div>
 );
 
-// --- ⭐ SECCIÓN DE RESEÑAS (ACTIVA) ---
+// --- ⭐ SECCIÓN DE RESEÑAS ---
 const ReviewsSection = () => {
     const [reviews, setReviews] = useState([
         { name: "Carlos M.", rating: 5, comment: "¡Excelente entrenador! Muy profesional." },
@@ -54,20 +53,17 @@ const ReviewsSection = () => {
     return (
         <div id="resenas" style={{ 
             maxWidth: '600px', margin: '60px auto', padding: '30px', 
-            backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '15px', 
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', borderRadius: '15px', 
             color: 'white', backdropFilter: 'blur(5px)', border: '1px solid rgba(255,255,255,0.2)' 
         }}>
-            <h2 style={{ fontSize: '1.8em', marginBottom: '20px' }}>⭐ Reseñas de Alumnos</h2>
+            <h2 style={{ fontSize: '1.8em', marginBottom: '20px' }}>⭐ Reseñas</h2>
             <form onSubmit={handleSubmitReview} style={{ textAlign: 'left', marginBottom: '30px' }}>
-                <input type="text" placeholder="Tu Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} style={{ width: '100%', padding: '10px', marginBottom: '10px', borderRadius: '5px', border: 'none', color: '#333' }} />
+                <input type="text" placeholder="Tu Nombre" value={newName} onChange={(e) => setNewName(e.target.value)} style={{ width: '100%', padding: '12px', marginBottom: '10px', borderRadius: '8px', border: 'none', backgroundColor: 'white', color: 'black' }} />
                 <div style={{ marginBottom: '10px' }}>
-                    <label>Calificación: </label>
-                    {[1, 2, 3, 4, 5].map(s => (
-                        <span key={s} onClick={() => setNewRating(s)} style={{ cursor: 'pointer', fontSize: '1.5em', color: s <= newRating ? '#FFD700' : '#ccc' }}>★</span>
-                    ))}
+                    {[1, 2, 3, 4, 5].map(s => <span key={s} onClick={() => setNewRating(s)} style={{ cursor: 'pointer', fontSize: '1.5em', color: s <= newRating ? '#FFD700' : '#ccc' }}>★</span>)}
                 </div>
-                <textarea placeholder="Tu opinión..." value={newComment} onChange={(e) => setNewComment(e.target.value)} style={{ width: '100%', padding: '10px', borderRadius: '5px', border: 'none', minHeight: '60px', color: '#333' }} />
-                <button type="submit" style={{ width: '100%', padding: '10px', marginTop: '10px', backgroundColor: '#FFD700', color: '#333', border: 'none', borderRadius: '5px', fontWeight: 'bold', cursor: 'pointer' }}>Publicar Reseña</button>
+                <textarea placeholder="Tu opinión..." value={newComment} onChange={(e) => setNewComment(e.target.value)} style={{ width: '100%', padding: '12px', borderRadius: '8px', border: 'none', minHeight: '60px', backgroundColor: 'white', color: 'black' }} />
+                <button type="submit" style={{ width: '100%', padding: '12px', marginTop: '10px', backgroundColor: '#FFD700', color: 'black', border: 'none', borderRadius: '8px', fontWeight: 'bold' }}>Publicar</button>
             </form>
             <div style={{ textAlign: 'left' }}>
                 {reviews.map((r, i) => (
@@ -88,43 +84,49 @@ const SideNav = () => {
     const links = [
         { label: "Quién Soy", href: "#presentacion", emoji: "💪" },
         { label: "Reseñas", href: "#resenas", emoji: "📝" },
-        { label: "Nutrición", href: "#nutricion", emoji: "🥑" },
         { label: "Contacto", href: "#contacto", emoji: "✉️" },
     ];
-
     return (
         <>
-            <div onClick={() => setIsOpen(!isOpen)} style={{ position: 'fixed', right: '15px', top: '15px', zIndex: 101, backgroundColor: '#007bff', color: 'white', padding: '10px 15px', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' }}>
-                {isOpen ? 'X' : '☰'}
-            </div>
-            <div style={{
-                position: 'fixed', right: '15px', top: '15px', backgroundColor: 'rgba(0, 0, 0, 0.95)', padding: '60px 20px 20px 20px',
-                borderRadius: '10px', zIndex: 100, display: isOpen ? 'flex' : 'none', flexDirection: 'column', gap: '15px',
-                border: '1px solid rgba(255,255,255,0.1)'
-            }}>
-                {links.map((link) => (
-                    <a key={link.href} href={link.href} onClick={() => setIsOpen(false)} style={{ color: 'white', textDecoration: 'none', fontSize: '1em', textAlign: 'left' }}>
-                        {link.emoji} {link.label}
-                    </a>
-                ))}
+            <div onClick={() => setIsOpen(!isOpen)} style={{ position: 'fixed', right: '15px', top: '15px', zIndex: 101, backgroundColor: '#007bff', color: 'white', padding: '10px 15px', borderRadius: '10px', cursor: 'pointer', fontWeight: 'bold' }}>{isOpen ? 'X' : '☰'}</div>
+            <div style={{ position: 'fixed', right: '15px', top: '15px', backgroundColor: 'rgba(0, 0, 0, 0.95)', padding: '60px 20px 20px 20px', borderRadius: '10px', zIndex: 100, display: isOpen ? 'flex' : 'none', flexDirection: 'column', gap: '15px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                {links.map((link) => (<a key={link.href} href={link.href} onClick={() => setIsOpen(false)} style={{ color: 'white', textDecoration: 'none' }}>{link.emoji} {link.label}</a>))}
             </div>
         </>
     );
 };
 
-// --- 📋 FORMULARIO DE DATOS ---
+// --- 📋 FORMULARIO DE FICHA TÉCNICA PROFESIONAL ---
 const RequestForm = () => {
-    const style = { width: '100%', padding: '12px', margin: '8px 0', borderRadius: '8px', border: 'none', color: '#333' };
+    const style = { width: '100%', padding: '12px', margin: '8px 0', borderRadius: '8px', border: '1px solid #ccc', backgroundColor: 'white', color: 'black' };
+    const labelStyle = { color: 'white', display: 'block', marginTop: '10px', fontWeight: 'bold', textAlign: 'left', fontSize: '0.9em' };
+
     return (
-        <div id="contacto" style={{ maxWidth: '450px', margin: '40px auto', padding: '25px', backgroundColor: 'rgba(0, 0, 0, 0.75)', borderRadius: '15px', border: '1px solid #007bff' }}>
-            <h2 style={{ color: 'white', marginBottom: '15px' }}>Solicitud de Planificación</h2>
+        <div id="contacto" style={{ maxWidth: '500px', margin: '40px auto', padding: '25px', backgroundColor: 'rgba(0, 0, 0, 0.85)', borderRadius: '15px', border: '1px solid #007bff' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>📋 Ficha de Alumno</h2>
             <form action="https://formspree.io/f/2893391712229522962" method="POST">
                 <input type="text" name="Nombre" placeholder="Nombre Completo" required style={style} />
                 <input type="email" name="Email" placeholder="Correo Electrónico" required style={style} />
-                <input type="tel" name="Telefono" placeholder="Número de WhatsApp" required style={style} />
-                <textarea name="Objetivo" placeholder="¿Cuál es tu objetivo?" required style={{ ...style, minHeight: '60px' }} />
-                <textarea name="Patologias" placeholder="¿Lesiones o patologías?" required style={{ ...style, minHeight: '60px' }} />
-                <button type="submit" style={{ width: '100%', padding: '14px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', marginTop: '10px', cursor: 'pointer' }}>Enviar Datos</button>
+                <input type="tel" name="Telefono" placeholder="WhatsApp (ej: +54...)" required style={style} />
+                
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <input type="number" name="Edad" placeholder="Edad" required style={style} />
+                    <input type="text" name="Peso" placeholder="Peso (kg)" required style={style} />
+                    <input type="text" name="Altura" placeholder="Altura (cm)" required style={style} />
+                </div>
+
+                <label style={labelStyle}>¿Es tu primera vez entrenando?</label>
+                <select name="Primera_Vez" style={style}>
+                    <option value="si">Sí, es mi primera vez</option>
+                    <option value="no">No, ya tengo experiencia</option>
+                </select>
+
+                <textarea name="Objetivos" placeholder="¿Cuáles son tus objetivos?" required style={{ ...style, minHeight: '60px' }} />
+                <textarea name="Lesiones" placeholder="¿Tienes lesiones? (¿Qué tipo?)" required style={{ ...style, minHeight: '60px' }} />
+                <textarea name="Medicamentos" placeholder="¿Tomas medicamentos?" style={{ ...style, minHeight: '60px' }} />
+                <textarea name="Operaciones_Enfermedades" placeholder="¿Operaciones o enfermedades?" style={{ ...style, minHeight: '60px' }} />
+
+                <button type="submit" style={{ width: '100%', padding: '14px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', marginTop: '20px', cursor: 'pointer' }}>Enviar Ficha Médica</button>
             </form>
         </div>
     );
@@ -144,7 +146,7 @@ function Home() {
                 <img src="/IMG-20251216-WA0001.jpg" alt="Logo" width={160} style={{ borderRadius: '50%', border: '4px solid #007bff' }} />
                 <h1 style={{ color: 'white', fontSize: '2.5em', marginTop: '20px', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Nehuen Flores Fitness</h1>
                 <div style={{ maxWidth: '500px', margin: '20px auto', padding: '20px', backgroundColor: 'rgba(255,255,255,0.85)', borderRadius: '15px', color: '#333' }}>
-                    <p>Entrenador personal enfocado en resultados reales y salud integral.</p>
+                    <p>Entrenador personal. Resultados reales y salud integral.</p>
                 </div>
             </div>
 
@@ -162,4 +164,3 @@ function Home() {
 }
 
 export default Home;
-            

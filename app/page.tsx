@@ -1,7 +1,8 @@
-
 // app/page.tsx
 
 "use client"; 
+
+import React, { useState } from 'react'; 
 
 // --- 🥑 COMPONENTE DE CONSEJOS DE ALIMENTACIÓN ---
 const NutritionTipsSection = () => {
@@ -171,7 +172,6 @@ const TestimonialsSection = () => {
 };
 // ------------------------------
 
-
 // --- 🎬 COMPONENTE DE SECCIÓN DE VIDEOS ---
 const VideoSection = () => {
     // ⚠️ VIDEO DE EJEMPLO DE FITNESS EN YOUTUBE
@@ -320,7 +320,6 @@ const CallToActionSection = () => {
 };
 // ------------------------------
 
-
 // --- COMPONENTE DEL FORMULARIO ---
 const RequestForm = () => {
     // Estilos internos
@@ -349,8 +348,11 @@ const RequestForm = () => {
 };
 // ------------------------------
 
-// --- 🧭 COMPONENTE DE NAVEGACIÓN LATERAL FIJA ---
+// --- 🧭 COMPONENTE DE NAVEGACIÓN LATERAL FIJA PLEGABLE ---
 const SideNav = () => {
+    // Estado para controlar si el menú está abierto o cerrado
+    const [isOpen, setIsOpen] = useState(false);
+
     const links = [
         { label: "Quién Soy", href: "#presentacion", emoji: "💪" },
         { label: "Éxitos", href: "#testimonios", emoji: "⭐" },
@@ -360,21 +362,42 @@ const SideNav = () => {
         { label: "Contacto", href: "#contacto", emoji: "✉️" },
     ];
 
+    // Estilo base del contenedor del menú (plegado o desplegado)
     const navStyle = {
         position: 'fixed' as 'fixed',
         right: '10px',
         top: '10px',
-        transform: 'none', 
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        backgroundColor: 'rgba(0, 0, 0, 0.9)', 
         padding: '10px',
         borderRadius: '10px',
-        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.6)',
+        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.8)',
         zIndex: 100,
         display: 'flex',
         flexDirection: 'column' as 'column',
-        gap: '5px', 
+        gap: '5px',
         maxWidth: '120px',
         textAlign: 'left' as 'left',
+        // Transición para el efecto de despliegue
+        transition: 'opacity 0.3s ease-in-out, visibility 0.3s',
+        opacity: isOpen ? 1 : 0, 
+        visibility: isOpen ? 'visible' : 'hidden' as 'hidden', 
+        pointerEvents: isOpen ? 'auto' : 'none' as 'none', 
+    };
+
+    // Estilo del botón (el icono ☰)
+    const toggleButtonStyle = {
+        position: 'fixed' as 'fixed',
+        right: '10px',
+        top: '10px',
+        zIndex: 101, // Debe estar por encima del menú
+        backgroundColor: isOpen ? '#007bff' : 'rgba(0, 0, 0, 0.7)',
+        color: 'white',
+        padding: '10px 15px',
+        borderRadius: '10px',
+        cursor: 'pointer',
+        fontSize: '1.2em',
+        fontWeight: 'bold' as 'bold',
+        lineHeight: '1',
     };
 
     const linkStyle = {
@@ -390,19 +413,28 @@ const SideNav = () => {
     };
 
     return (
-        <div style={navStyle}>
-            {links.map((link) => (
-                <a 
-                    key={link.href} 
-                    href={link.href} 
-                    style={linkStyle}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 123, 255, 0.8)'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-                >
-                    {link.emoji} {link.label}
-                </a>
-            ))}
-        </div>
+        <>
+            {/* Botón de Toggle (Visible siempre) */}
+            <div style={toggleButtonStyle} onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? 'X' : '☰'} 
+            </div>
+
+            {/* Contenedor del Menú (Aparece y desaparece) */}
+            <div style={navStyle}>
+                {links.map((link) => (
+                    <a 
+                        key={link.href} 
+                        href={link.href} 
+                        style={linkStyle}
+                        onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 123, 255, 0.8)'}
+                        onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        onClick={() => setIsOpen(false)} // Cierra el menú al hacer clic
+                    >
+                        {link.emoji} {link.label}
+                    </a>
+                ))}
+            </div>
+        </>
     );
 };
 // ------------------------------
@@ -428,7 +460,7 @@ function Home() {
             position: 'relative',
         }}>
             
-            {/* COMPONENTE DE NAVEGACIÓN LATERAL FIJA */}
+            {/* COMPONENTE DE NAVEGACIÓN LATERAL FIJA PLEGABLE */}
             <SideNav />
 
             {/* LOGO Y TEXTO DE BIENVENIDA: Fluyen normalmente */}
@@ -445,7 +477,7 @@ function Home() {
                         marginBottom: '10px',
                         position: 'relative', 
                         zIndex: 10,
-                        marginTop: '100px' // Espacio para el menú lateral
+                        marginTop: '60px' // Deja espacio para el botón de menú plegable
                     }} 
                 />
                 
@@ -459,7 +491,7 @@ function Home() {
             
             {/* SECCIONES DE CONTENIDO */}
             <AboutSection />
-            <CallToActionSection /> {/* <--- NUEVO CTA AÑADIDO AQUÍ */}
+            <CallToActionSection />
             <TestimonialsSection />
             <FitnessTipsSection />
             <NutritionTipsSection />

@@ -348,7 +348,7 @@ const RequestForm = () => {
 };
 // ------------------------------
 
-// --- 🧭 COMPONENTE DE NAVEGACIÓN LATERAL FIJA PLEGABLE ---
+// --- 🧭 COMPONENTE DE NAVEGACIÓN LATERAL FIJA PLEGABLE (CORREGIDO) ---
 const SideNav = () => {
     // Estado para controlar si el menú está abierto o cerrado
     const [isOpen, setIsOpen] = useState(false);
@@ -380,8 +380,10 @@ const SideNav = () => {
         // Transición para el efecto de despliegue
         transition: 'opacity 0.3s ease-in-out, visibility 0.3s',
         opacity: isOpen ? 1 : 0, 
-        visibility: isOpen ? 'visible' : 'hidden' as 'hidden', 
-        pointerEvents: isOpen ? 'auto' : 'none' as 'none', 
+        // --- CORRECCIÓN 1: TIPADO DE 'visibility' ---
+        visibility: isOpen ? 'visible' as 'visible' : 'hidden' as 'hidden', 
+        // --- CORRECCIÓN 2: TIPADO DE 'pointerEvents' ---
+        pointerEvents: isOpen ? 'auto' as 'auto' : 'none' as 'none', 
     };
 
     // Estilo del botón (el icono ☰)
@@ -438,6 +440,7 @@ const SideNav = () => {
     );
 };
 // ------------------------------
+
 
 // --- COMPONENTE PRINCIPAL (HOME) ---
 function Home() { 

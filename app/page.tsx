@@ -33,7 +33,7 @@ const NutritionTipsSection = () => {
     };
 
     return (
-        <div id="nutricion" style={containerStyle}> {/* <--- ID ASIGNADO */}
+        <div id="nutricion" style={containerStyle}>
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px', borderBottom: '2px solid #25D366', paddingBottom: '10px' }}>
                 🥑 Fundamentos de Nutrición
             </h2>
@@ -79,7 +79,7 @@ const FitnessTipsSection = () => {
     };
 
     return (
-        <div id="consejos-fitness" style={containerStyle}> {/* <--- ID ASIGNADO */}
+        <div id="consejos-fitness" style={containerStyle}>
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px', borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
                 💡 Consejos Rápidos para el Éxito
             </h2>
@@ -154,7 +154,7 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <div id="testimonios" style={containerStyle}> {/* <--- ID ASIGNADO */}
+        <div id="testimonios" style={containerStyle}>
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '30px', borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
                 ⭐ Historias de Éxito
             </h2>
@@ -170,7 +170,6 @@ const TestimonialsSection = () => {
     );
 };
 // ------------------------------
-
 
 // --- 🎬 COMPONENTE DE SECCIÓN DE VIDEOS ---
 const VideoSection = () => {
@@ -213,7 +212,7 @@ const VideoSection = () => {
     };
 
     return (
-        <div id="videos" style={containerStyle}> {/* <--- ID ASIGNADO */}
+        <div id="videos" style={containerStyle}>
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px' }}>
                 📺 Video de Muestra (¡Pruébanos!)
             </h2>
@@ -244,7 +243,7 @@ const VideoSection = () => {
 // --- COMPONENTE DE PRESENTACIÓN (Acerca de Mí) ---
 const AboutSection = () => {
     return (
-        <div id="presentacion" style={{ // <--- ID ASIGNADO
+        <div id="presentacion" style={{
             maxWidth: '500px', 
             margin: '40px auto', 
             padding: '30px', 
@@ -286,7 +285,7 @@ const RequestForm = () => {
     const buttonStyle = { width: '100%', backgroundColor: '#007bff', color: 'white', padding: '14px 20px', margin: '10px 0', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '1em', fontWeight: 'bold' as 'bold', };
 
     return (
-        <div id="contacto" style={{ // <--- ID ASIGNADO
+        <div id="contacto" style={{
             maxWidth: '400px', margin: '30px auto', padding: '20px', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)' 
         }}>
             <h2 style={{ color: 'white', marginBottom: '20px', fontSize: '1.5em' }}>
@@ -320,18 +319,19 @@ const SideNav = () => {
 
     const navStyle = {
         position: 'fixed' as 'fixed',
-        right: '10px',
-        top: '50%',
-        transform: 'translateY(-50%)',
+        left: '10px', 
+        top: '10px',
+        transform: 'none', 
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        padding: '15px',
+        padding: '10px',
         borderRadius: '10px',
         boxShadow: '0 4px 10px rgba(0, 0, 0, 0.6)',
-        zIndex: 100, // Asegura que esté por encima de otros elementos
+        zIndex: 100,
         display: 'flex',
         flexDirection: 'column' as 'column',
-        gap: '10px',
-        maxWidth: '150px'
+        gap: '5px', 
+        maxWidth: '120px',
+        textAlign: 'left' as 'left',
     };
 
     const linkStyle = {
@@ -374,52 +374,46 @@ function Home() {
     return (
         <div style={{ 
             textAlign: 'center', 
-            paddingTop: '10vh', 
+            paddingTop: '200px', // Aumentamos el espacio superior
             paddingBottom: '50px', 
             minHeight: '100vh', 
             backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', 
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
             backgroundAttachment: 'fixed',
-            scrollBehavior: 'smooth', // <--- SCROLL SUAVE
-            position: 'relative', // Para asegurar que el SideNav se posicione correctamente
+            scrollBehavior: 'smooth',
+            position: 'relative',
         }}>
             
             {/* COMPONENTE DE NAVEGACIÓN LATERAL FIJA */}
             <SideNav />
 
-            {/* EL LOGO PRINCIPAL */}
-            <img src="/IMG-20251216-WA0001.jpg" alt="Mi logo de fitness" width={200} style={{ marginBottom: '40px' }} />
+            {/* EL LOGO PRINCIPAL (Posicionamiento absoluto) */}
+            <img src="/IMG-20251216-WA0001.jpg" alt="Mi logo de fitness" width={180} style={{ marginBottom: '10px', position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 90 }} />
             
-            {/* TEXTO DE LA PÁGINA */}
-            <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px' }}>
+            {/* TEXTO DE LA PÁGINA (Posicionamiento absoluto) */}
+            <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px', position: 'absolute', top: '140px', left: '50%', transform: 'translateX(-50%)', width: '90%', zIndex: 90 }}>
                 Bienvenido a mi página de fitness
             </h1>
-            <p style={{ color: 'white', fontSize: '1.2em' }}>
+            <p style={{ color: 'white', fontSize: '1.2em', position: 'absolute', top: '180px', left: '50%', transform: 'translateX(-50%)', width: '90%', zIndex: 90 }}>
                 ¡Vamos a crear contenido increíble!
             </p>
 
-            {/* SECCIÓN DE PRESENTACIÓN */}
+            {/* SECCIONES DE CONTENIDO */}
             <AboutSection />
-
-            {/* SECCIÓN DE TESTIMONIOS */}
             <TestimonialsSection />
-
-            {/* SECCIÓN: CONSEJOS FITNESS */}
             <FitnessTipsSection />
-            
-            {/* SECCIÓN: CONSEJOS NUTRICIONALES */}
             <NutritionTipsSection />
-
-            {/* SECCIÓN DE VIDEOS */}
             <VideoSection />
-
-            {/* RENDERIZADO DEL FORMULARIO */}
             <RequestForm />
             
             {/* CONTENEDOR FLOTANTE PARA BOTONES (WhatsApp + IG) */}
             <div style={{
-                position: 'fixed', bottom: '25px', left: '25px', zIndex: 1000, // CAMBIADO A LA IZQUIERDA para no chocar con el menú lateral
+                position: 'fixed', 
+                bottom: '25px', 
+                left: '25px', 
+                right: 'auto', 
+                zIndex: 1000,
                 display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', 
             }}>
                 
@@ -452,4 +446,5 @@ function Home() {
     );
 }
 
-export default Home; 
+// Exportación final
+export default Home;

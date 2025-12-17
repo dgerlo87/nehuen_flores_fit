@@ -1,4 +1,3 @@
-
 // app/page.tsx
 
 "use client"; 
@@ -171,6 +170,7 @@ const TestimonialsSection = () => {
 };
 // ------------------------------
 
+
 // --- 🎬 COMPONENTE DE SECCIÓN DE VIDEOS ---
 const VideoSection = () => {
     // ⚠️ VIDEO DE EJEMPLO DE FITNESS EN YOUTUBE
@@ -278,7 +278,7 @@ const AboutSection = () => {
 };
 // ------------------------------
 
-// --- COMPONENTE DEL FORMULARIO (Mantenemos el endpoint de Formspree) ---
+// --- COMPONENTE DEL FORMULARIO ---
 const RequestForm = () => {
     // Estilos internos
     const inputStyle = { width: '100%', padding: '12px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '8px', boxSizing: 'border-box' as 'border-box', backgroundColor: 'rgba(255, 255, 255, 0.9)', color: '#333', };
@@ -292,7 +292,7 @@ const RequestForm = () => {
                 Solicita tu Rutina Personalizada
             </h2>
             
-            {/* Formulario conectado a tu endpoint de Formspree - ¡RECUERDA ARREGLAR ESTE ID EN FORMSPREE! */}
+            {/* Formulario conectado a tu endpoint de Formspree */}
             <form action="https://formspree.io/f/2893391712229522962" method="POST">
                 <input type="text" name="Nombre" placeholder="Tu Nombre Completo" required style={inputStyle} />
                 <textarea name="Objetivo" placeholder="Describe tu objetivo (perder peso, ganar músculo, etc.)" required rows={4} style={{ ...inputStyle, resize: 'vertical' as 'vertical' }} />
@@ -319,7 +319,7 @@ const SideNav = () => {
 
     const navStyle = {
         position: 'fixed' as 'fixed',
-        left: '10px', 
+        right: '10px', // Lo movemos a la derecha
         top: '10px',
         transform: 'none', 
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
@@ -374,7 +374,7 @@ function Home() {
     return (
         <div style={{ 
             textAlign: 'center', 
-            paddingTop: '200px', // Aumentamos el espacio superior
+            paddingTop: '30px', 
             paddingBottom: '50px', 
             minHeight: '100vh', 
             backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', 
@@ -388,17 +388,33 @@ function Home() {
             {/* COMPONENTE DE NAVEGACIÓN LATERAL FIJA */}
             <SideNav />
 
-            {/* EL LOGO PRINCIPAL (Posicionamiento absoluto) */}
-            <img src="/IMG-20251216-WA0001.jpg" alt="Mi logo de fitness" width={180} style={{ marginBottom: '10px', position: 'absolute', top: '10px', left: '50%', transform: 'translateX(-50%)', zIndex: 90 }} />
+            {/* LOGO Y TEXTO DE BIENVENIDA: Fluyen normalmente */}
+            <div style={{
+                maxWidth: '90%', 
+                margin: '0 auto 40px auto', 
+                paddingTop: '10px',
+            }}>
+                <img 
+                    src="/IMG-20251216-WA0001.jpg" 
+                    alt="Mi logo de fitness" 
+                    width={180} 
+                    style={{ 
+                        marginBottom: '10px',
+                        position: 'relative', 
+                        zIndex: 10,
+                        // Margen para dejar espacio al menú lateral en la derecha
+                        marginTop: '100px' 
+                    }} 
+                />
+                
+                <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px' }}>
+                    Bienvenido a mi página de fitness
+                </h1>
+                <p style={{ color: 'white', fontSize: '1.2em' }}>
+                    ¡Vamos a crear contenido increíble!
+                </p>
+            </div>
             
-            {/* TEXTO DE LA PÁGINA (Posicionamiento absoluto) */}
-            <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px', position: 'absolute', top: '140px', left: '50%', transform: 'translateX(-50%)', width: '90%', zIndex: 90 }}>
-                Bienvenido a mi página de fitness
-            </h1>
-            <p style={{ color: 'white', fontSize: '1.2em', position: 'absolute', top: '180px', left: '50%', transform: 'translateX(-50%)', width: '90%', zIndex: 90 }}>
-                ¡Vamos a crear contenido increíble!
-            </p>
-
             {/* SECCIONES DE CONTENIDO */}
             <AboutSection />
             <TestimonialsSection />
@@ -411,6 +427,7 @@ function Home() {
             <div style={{
                 position: 'fixed', 
                 bottom: '25px', 
+                // Posicionado a la izquierda para no chocar con el SideNav
                 left: '25px', 
                 right: 'auto', 
                 zIndex: 1000,
@@ -446,5 +463,5 @@ function Home() {
     );
 }
 
-// Exportación final
+// Exportación final que soluciona el error de Type/Property Missing
 export default Home;

@@ -1,3 +1,4 @@
+
 // app/page.tsx
 
 "use client"; 
@@ -240,23 +241,31 @@ const VideoSection = () => {
 };
 // ------------------------------
 
+
 // --- COMPONENTE DE PRESENTACIÓN (Acerca de Mí) ---
 const AboutSection = () => {
+    // Definimos el color de texto oscuro para mayor contraste
+    const darkTextColor = '#333'; 
+    const whiteTextColor = 'white';
+
     return (
         <div id="presentacion" style={{
             maxWidth: '500px', 
             margin: '40px auto', 
             padding: '30px', 
-            backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+            // Fondo claro semi-transparente
+            backgroundColor: 'rgba(255, 255, 255, 0.7)', 
             borderRadius: '15px', 
             boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
             textAlign: 'left',
-            color: 'white', 
+            // Aplicamos el color de texto oscuro
+            color: darkTextColor, 
             backdropFilter: 'blur(3px)', 
             border: '1px solid rgba(255, 255, 255, 0.2)'
         }}>
             <h2 style={{ 
-                color: '#fff', 
+                // Mantenemos el blanco para el título (contrasta bien con el fondo blanco semi-transparente)
+                color: whiteTextColor, 
                 fontSize: '1.8em', 
                 marginBottom: '15px',
                 borderBottom: '2px solid #007bff', 
@@ -277,6 +286,40 @@ const AboutSection = () => {
     );
 };
 // ------------------------------
+
+
+// --- 📞 COMPONENTE DE LLAMADA A LA ACCIÓN (CTA) ---
+const CallToActionSection = () => {
+    const buttonStyle = { 
+        display: 'inline-block', 
+        backgroundColor: '#007bff', 
+        color: 'white', 
+        padding: '15px 30px', 
+        margin: '20px auto', 
+        borderRadius: '10px', 
+        cursor: 'pointer', 
+        fontSize: '1.2em', 
+        fontWeight: 'bold' as 'bold',
+        textDecoration: 'none',
+        transition: 'background-color 0.3s',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)'
+    };
+
+    return (
+        <div style={{ textAlign: 'center', margin: '40px 0' }}>
+            <a 
+                href="#contacto" 
+                style={buttonStyle}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#0056b3'}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#007bff'}
+            >
+                🔥 ¡Quiero mi Rutina Personalizada! 🔥
+            </a>
+        </div>
+    );
+};
+// ------------------------------
+
 
 // --- COMPONENTE DEL FORMULARIO ---
 const RequestForm = () => {
@@ -319,7 +362,7 @@ const SideNav = () => {
 
     const navStyle = {
         position: 'fixed' as 'fixed',
-        right: '10px', // Lo movemos a la derecha
+        right: '10px',
         top: '10px',
         transform: 'none', 
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
@@ -402,8 +445,7 @@ function Home() {
                         marginBottom: '10px',
                         position: 'relative', 
                         zIndex: 10,
-                        // Margen para dejar espacio al menú lateral en la derecha
-                        marginTop: '100px' 
+                        marginTop: '100px' // Espacio para el menú lateral
                     }} 
                 />
                 
@@ -417,6 +459,7 @@ function Home() {
             
             {/* SECCIONES DE CONTENIDO */}
             <AboutSection />
+            <CallToActionSection /> {/* <--- NUEVO CTA AÑADIDO AQUÍ */}
             <TestimonialsSection />
             <FitnessTipsSection />
             <NutritionTipsSection />
@@ -427,7 +470,6 @@ function Home() {
             <div style={{
                 position: 'fixed', 
                 bottom: '25px', 
-                // Posicionado a la izquierda para no chocar con el SideNav
                 left: '25px', 
                 right: 'auto', 
                 zIndex: 1000,
@@ -463,5 +505,5 @@ function Home() {
     );
 }
 
-// Exportación final que soluciona el error de Type/Property Missing
+// Exportación final
 export default Home;

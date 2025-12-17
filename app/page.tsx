@@ -1,4 +1,5 @@
- // app/page.tsx
+
+// app/page.tsx
 
 "use client"; 
 
@@ -32,7 +33,7 @@ const NutritionTipsSection = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div id="nutricion" style={containerStyle}> {/* <--- ID ASIGNADO */}
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px', borderBottom: '2px solid #25D366', paddingBottom: '10px' }}>
                 🥑 Fundamentos de Nutrición
             </h2>
@@ -78,7 +79,7 @@ const FitnessTipsSection = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div id="consejos-fitness" style={containerStyle}> {/* <--- ID ASIGNADO */}
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px', borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
                 💡 Consejos Rápidos para el Éxito
             </h2>
@@ -153,7 +154,7 @@ const TestimonialsSection = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div id="testimonios" style={containerStyle}> {/* <--- ID ASIGNADO */}
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '30px', borderBottom: '2px solid #007bff', paddingBottom: '10px' }}>
                 ⭐ Historias de Éxito
             </h2>
@@ -212,7 +213,7 @@ const VideoSection = () => {
     };
 
     return (
-        <div style={containerStyle}>
+        <div id="videos" style={containerStyle}> {/* <--- ID ASIGNADO */}
             <h2 style={{ color: '#fff', fontSize: '1.8em', marginBottom: '20px' }}>
                 📺 Video de Muestra (¡Pruébanos!)
             </h2>
@@ -243,7 +244,7 @@ const VideoSection = () => {
 // --- COMPONENTE DE PRESENTACIÓN (Acerca de Mí) ---
 const AboutSection = () => {
     return (
-        <div style={{ 
+        <div id="presentacion" style={{ // <--- ID ASIGNADO
             maxWidth: '500px', 
             margin: '40px auto', 
             padding: '30px', 
@@ -285,7 +286,9 @@ const RequestForm = () => {
     const buttonStyle = { width: '100%', backgroundColor: '#007bff', color: 'white', padding: '14px 20px', margin: '10px 0', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '1em', fontWeight: 'bold' as 'bold', };
 
     return (
-        <div style={{ maxWidth: '400px', margin: '30px auto', padding: '20px', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)' }}>
+        <div id="contacto" style={{ // <--- ID ASIGNADO
+            maxWidth: '400px', margin: '30px auto', padding: '20px', backgroundColor: 'rgba(0, 0, 0, 0.5)', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)' 
+        }}>
             <h2 style={{ color: 'white', marginBottom: '20px', fontSize: '1.5em' }}>
                 Solicita tu Rutina Personalizada
             </h2>
@@ -304,8 +307,65 @@ const RequestForm = () => {
 };
 // ------------------------------
 
+// --- 🧭 COMPONENTE DE NAVEGACIÓN LATERAL FIJA ---
+const SideNav = () => {
+    const links = [
+        { label: "Quién Soy", href: "#presentacion", emoji: "💪" },
+        { label: "Éxitos", href: "#testimonios", emoji: "⭐" },
+        { label: "Fitness", href: "#consejos-fitness", emoji: "💡" },
+        { label: "Nutrición", href: "#nutricion", emoji: "🥑" },
+        { label: "Videos", href: "#videos", emoji: "📺" },
+        { label: "Contacto", href: "#contacto", emoji: "✉️" },
+    ];
+
+    const navStyle = {
+        position: 'fixed' as 'fixed',
+        right: '10px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        padding: '15px',
+        borderRadius: '10px',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.6)',
+        zIndex: 100, // Asegura que esté por encima de otros elementos
+        display: 'flex',
+        flexDirection: 'column' as 'column',
+        gap: '10px',
+        maxWidth: '150px'
+    };
+
+    const linkStyle = {
+        color: 'white',
+        textDecoration: 'none',
+        fontSize: '0.9em',
+        fontWeight: 'bold' as 'bold',
+        padding: '8px',
+        borderRadius: '5px',
+        transition: 'background-color 0.3s',
+        textAlign: 'left' as 'left',
+        whiteSpace: 'nowrap' as 'nowrap',
+    };
+
+    return (
+        <div style={navStyle}>
+            {links.map((link) => (
+                <a 
+                    key={link.href} 
+                    href={link.href} 
+                    style={linkStyle}
+                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(0, 123, 255, 0.8)'}
+                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                >
+                    {link.emoji} {link.label}
+                </a>
+            ))}
+        </div>
+    );
+};
+// ------------------------------
+
 // --- COMPONENTE PRINCIPAL (HOME) ---
-function Home() { // <--- ⚠️ IMPORTANTE: YA NO DICE 'export default'
+function Home() { 
     // Configuración de Enlaces
     const whatsappNumber = '5491172145711'; 
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
@@ -320,9 +380,14 @@ function Home() { // <--- ⚠️ IMPORTANTE: YA NO DICE 'export default'
             backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', 
             backgroundSize: 'cover', 
             backgroundPosition: 'center', 
-            backgroundAttachment: 'fixed' 
+            backgroundAttachment: 'fixed',
+            scrollBehavior: 'smooth', // <--- SCROLL SUAVE
+            position: 'relative', // Para asegurar que el SideNav se posicione correctamente
         }}>
             
+            {/* COMPONENTE DE NAVEGACIÓN LATERAL FIJA */}
+            <SideNav />
+
             {/* EL LOGO PRINCIPAL */}
             <img src="/IMG-20251216-WA0001.jpg" alt="Mi logo de fitness" width={200} style={{ marginBottom: '40px' }} />
             
@@ -354,8 +419,8 @@ function Home() { // <--- ⚠️ IMPORTANTE: YA NO DICE 'export default'
             
             {/* CONTENEDOR FLOTANTE PARA BOTONES (WhatsApp + IG) */}
             <div style={{
-                position: 'fixed', bottom: '25px', right: '25px', zIndex: 1000,
-                display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '10px', 
+                position: 'fixed', bottom: '25px', left: '25px', zIndex: 1000, // CAMBIADO A LA IZQUIERDA para no chocar con el menú lateral
+                display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', 
             }}>
                 
                 {/* BOTÓN DE WHATSAPP (Ajustado) */}
@@ -387,5 +452,4 @@ function Home() { // <--- ⚠️ IMPORTANTE: YA NO DICE 'export default'
     );
 }
 
-// 🚀 ESTA ES LA LÍNEA MÁGICA FINAL QUE SOLUCIONA EL ERROR DE TYPE/PROPERTY MISSING:
-export default Home;
+export default Home; 

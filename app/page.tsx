@@ -484,7 +484,7 @@ function Home() {
                 />
                 
                 <h1 style={{ color: 'white', fontSize: '2em', marginBottom: '10px' }}>
-                    Bienvenido a mi página de fitness
+                    Bienvenido a Nehuen Fit
                 </h1>
                 <p style={{ color: 'white', fontSize: '1.2em' }}>
                     ¡Vamos a crear contenido increíble!

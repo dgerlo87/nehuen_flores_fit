@@ -274,7 +274,7 @@ const AboutSection = () => {
                 💪 Conoce a Nehuen Flores
             </h2>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
-                ¡Hola! Soy **Nehuen Flores**, tu entrenador de fitness comprometido con ayudarte a alcanzar tu mejor versión. Con años de experiencia y una pasión inquebrantable por la transformación física, mi misión es simple: **hacer que el fitness funcione para ti**.
+                ¡Hola! Soy **Nehuen Flores**, tu entrenador de fitness comprometido con ayudarte a alcanzar tu mejor versión. Con años de experiencia y una pasión inquebrantable por la transformación física, mi misión es simple: **hacer que el fitness funcione para vos**.
             </p>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
                 Me especializo en crear rutinas **totalmente personalizadas** que se ajustan a tu estilo de vida, nivel y objetivos específicos, ya sea que busques ganar músculo, perder peso o mejorar tu rendimiento atlético.

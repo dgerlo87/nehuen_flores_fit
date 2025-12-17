@@ -441,7 +441,7 @@ const SideNav = () => {
 };
 // ------------------------------
 
-// --- COMPONENTE PRINCIPAL (HOME) - Solo la parte de los botones flotantes ha cambiado ---
+// --- COMPONENTE PRINCIPAL (HOME) - Íconos flotantes movidos a la derecha ---
 function Home() { 
     // Configuración de Enlaces
     const whatsappNumber = '5491172145711'; 
@@ -479,7 +479,7 @@ function Home() {
                         marginBottom: '10px',
                         position: 'relative', 
                         zIndex: 10,
-                        marginTop: '60px' // Deja espacio para el botón de menú plegable
+                        marginTop: '60px' 
                     }} 
                 />
                 
@@ -500,36 +500,39 @@ function Home() {
             <VideoSection />
             <RequestForm />
             
-            {/* CONTENEDOR FLOTANTE PARA BOTONES (WhatsApp + IG) */}
+            {/* CONTENEDOR FLOTANTE PARA BOTONES (WhatsApp + IG) - ¡AHORA EN LA DERECHA! */}
             <div style={{
                 position: 'fixed', 
-                bottom: '20px', // Separamos un poco más del borde inferior
-                left: '20px', // Separamos un poco más del borde izquierdo
-                right: 'auto', 
+                bottom: '20px', 
+                right: '20px', // <-- ¡Cambiado de 'left' a 'right'!
+                left: 'auto', 
                 zIndex: 1000,
-                display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px', // Reducimos el espacio entre ellos
+                display: 'flex', 
+                flexDirection: 'column' as 'column', 
+                alignItems: 'flex-end', // Alineamos los iconos a la derecha
+                gap: '8px', 
             }}>
                 
-                {/* BOTÓN DE WHATSAPP (Ajustado el tamaño) */}
+                {/* BOTÓN DE WHATSAPP */}
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{
                     display: 'inline-block', backgroundColor: '#25D366', 
-                    padding: '8px 10px', // Reducimos el padding
-                    borderRadius: '50%', boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', // Sombra más sutil
+                    padding: '8px 10px', 
+                    borderRadius: '50%', boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', 
                     lineHeight: '1', 
-                    fontSize: '20px', // Reducimos el tamaño de la fuente (el icono)
+                    fontSize: '20px', 
                 }}>
                     📞 
                 </a>
 
-                {/* BOTÓN DE INSTAGRAM (Ajustado el tamaño) */}
+                {/* BOTÓN DE INSTAGRAM */}
                 <a href={instagramLink} target="_blank" rel="noopener noreferrer" style={{
                     display: 'inline-block',
                     background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
-                    padding: '8px 10px', // Reducimos el padding
-                    borderRadius: '50%', // Lo hacemos completamente redondo
-                    boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', // Sombra más sutil
+                    padding: '8px 10px', 
+                    borderRadius: '50%', 
+                    boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', 
                     lineHeight: '1', 
-                    fontSize: '20px', // Reducimos el tamaño de la fuente (el icono)
+                    fontSize: '20px', 
                 }}>
                     📸 
                 </a>
@@ -539,4 +542,5 @@ function Home() {
     );
 }
 
- export default Home; // 
+// export default Home; 
+

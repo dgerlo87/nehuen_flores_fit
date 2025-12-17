@@ -72,35 +72,46 @@ const SideNav = () => {
     );
 };
 
-// --- 📋 FORMULARIO DE FICHA TÉCNICA ---
+
+ // --- 📋 FORMULARIO DE FICHA TÉCNICA (CORREGIDO) ---
 const RequestForm = () => {
-    const s = { width: '100%', padding: '12px', margin: '8px 0', borderRadius: '8px', border: '1px solid #ccc', color: 'black' };
+    // Estilo para que las letras se vean negras y claras
+    const inputStyle = { 
+        width: '100%', 
+        padding: '12px', 
+        margin: '8px 0', 
+        borderRadius: '8px', 
+        border: '1px solid #ccc', 
+        backgroundColor: '#ffffff', // Fondo blanco
+        color: '#000000',           // LETRAS NEGRAS
+        fontSize: '16px' 
+    };
+
     return (
         <div id="contacto" style={{ maxWidth: '500px', margin: '40px auto', padding: '25px', backgroundColor: 'rgba(0, 0, 0, 0.85)', borderRadius: '15px', border: '1px solid #007bff' }}>
             <h2 style={{ color: 'white', marginBottom: '20px' }}>📋 Ficha de Alumno</h2>
             <form action="https://formspree.io/f/mqkvpown" method="POST">
-                <input type="text" name="Nombre" placeholder="Nombre Completo" required style={s} />
-                <input type="tel" name="WhatsApp" placeholder="WhatsApp" required style={s} />
+                <input type="text" name="Nombre" placeholder="Nombre Completo" required style={inputStyle} />
+                <input type="tel" name="WhatsApp" placeholder="WhatsApp" required style={inputStyle} />
                 <div style={{ display: 'flex', gap: '10px' }}>
-                    <input type="text" name="Edad" placeholder="Edad" style={s} />
-                    <input type="text" name="Peso" placeholder="Peso (kg)" style={s} />
-                    <input type="text" name="Altura" placeholder="Altura (cm)" style={s} />
+                    <input type="text" name="Edad" placeholder="Edad" style={inputStyle} />
+                    <input type="text" name="Peso" placeholder="Peso (kg)" style={inputStyle} />
+                    <input type="text" name="Altura" placeholder="Altura (cm)" style={inputStyle} />
                 </div>
-                <textarea name="Objetivos" placeholder="¿Cuáles son tus objetivos?" required style={{ ...s, minHeight: '60px' }} />
-                <textarea name="Salud" placeholder="¿Lesiones o enfermedades?" style={{ ...s, minHeight: '60px' }} />
-                <button type="submit" style={{ width: '100%', padding: '14px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', marginTop: '10px', cursor: 'pointer' }}>Enviar Ficha al Profe</button>
+                <textarea name="Objetivos" placeholder="¿Cuáles son tus objetivos?" required style={{ ...inputStyle, minHeight: '80px' }} />
+                <textarea name="Salud" placeholder="¿Lesiones o enfermedades?" style={{ ...inputStyle, minHeight: '80px' }} />
+                <button type="submit" style={{ width: '100%', padding: '14px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', marginTop: '10px', cursor: 'pointer', fontSize: '18px' }}>Enviar Ficha al Profe</button>
             </form>
         </div>
     );
 };
 
-// --- 🏠 COMPONENTE PRINCIPAL (CIERRE DEL ARCHIVO) ---
+// --- 🏠 COMPONENTE PRINCIPAL ---
 export default function Home() {
     return (
         <div style={{ textAlign: 'center', minHeight: '100vh', backgroundImage: 'url("/IMG-20251215-WA0059.jpg")', backgroundSize: 'cover', backgroundAttachment: 'fixed', backgroundPosition: 'center', scrollBehavior: 'smooth' }}>
             <SideNav />
             
-            {/* Reproductor de Música Rock */}
             <audio controls autoPlay loop style={{ position: 'fixed', bottom: '15px', left: '15px', zIndex: 1000, width: '150px', height: '30px', opacity: 0.6 }}>
                 <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
             </audio>
@@ -121,14 +132,12 @@ export default function Home() {
             <NutritionTipsSection />
             <RequestForm />
 
-            {/* Redes Sociales Flotantes */}
             <div style={{ position: 'fixed', bottom: '60px', right: '20px', display: 'flex', flexDirection: 'column', gap: '12px', zIndex: 1000 }}>
-                <a href="https://wa.me/5491172145711" target="blank" style={{ backgroundColor: '#25D366', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>📞</a>
-                <a href="https://www.instagram.com/Fitnes_nehuen" target="blank" style={{ background: 'linear-gradient(45deg, #f09433, #bc1888)', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>📸</a>
+                <a href="https://wa.me/5491172145711" target="_blank" style={{ backgroundColor: '#25D366', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>📞</a>
+                <a href="https://www.instagram.com/Fitnes_nehuen" target="_blank" style={{ background: 'linear-gradient(45deg, #f09433, #bc1888)', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>📸</a>
             </div>
         </div>
     );
 }
-
-                                           
+                                          
 

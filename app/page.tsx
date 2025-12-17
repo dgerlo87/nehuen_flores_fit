@@ -162,9 +162,10 @@ function Home() {
             
             <SideNav />
             
-            {/* Reproductor de audio sutil */}
-            <audio controls loop style={{ position: 'fixed', bottom: '15px', left: '15px', zIndex: 1000, width: '180px', height: '35px', opacity: 0.7 }}>
-                <source src="/background_music.mp3" type="audio/mpeg" />
+            {/* 🎵 Reproductor con Música de Gym Real 🎵 */}
+            <audio controls loop style={{ position: 'fixed', bottom: '15px', left: '15px', zIndex: 1000, width: '180px', height: '35px', opacity: 0.8 }}>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg" />
+                Tu navegador no soporta el audio.
             </audio>
 
             <div style={{ paddingTop: '100px', marginBottom: '40px' }}>
@@ -179,7 +180,7 @@ function Home() {
             <NutritionTipsSection />
             <RequestForm />
 
-            {/* Redes sociales a la derecha (fuera del camino del texto) */}
+            {/* Redes sociales a la derecha */}
             <div style={{ position: 'fixed', bottom: '20px', right: '20px', display: 'flex', flexDirection: 'column', gap: '12px', zIndex: 1000 }}>
                 <a href="https://wa.me/5491172145711" target="_blank" style={{ backgroundColor: '#25D366', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', fontSize: '20px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)' }}>📞</a>
                 <a href="https://www.instagram.com/Fitnes_nehuen" target="_blank" style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', fontSize: '20px', boxShadow: '0 4px 10px rgba(0,0,0,0.3)' }}>📸</a>
@@ -188,5 +189,5 @@ function Home() {
     );
 }
 
-// 🛑 ¡ESTA LÍNEA ES OBLIGATORIA PARA QUE FUNCIONE! 🛑
 export default Home;
+

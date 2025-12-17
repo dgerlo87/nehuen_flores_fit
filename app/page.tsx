@@ -539,4 +539,4 @@ function Home() {
     );
 }
 
-// export default Home; // Esto debe ir al final del archivo
+ export default Home; // 

@@ -441,8 +441,7 @@ const SideNav = () => {
 };
 // ------------------------------
 
-
-// --- COMPONENTE PRINCIPAL (HOME) ---
+// --- COMPONENTE PRINCIPAL (HOME) - Solo la parte de los botones flotantes ha cambiado ---
 function Home() { 
     // Configuración de Enlaces
     const whatsappNumber = '5491172145711'; 
@@ -504,33 +503,33 @@ function Home() {
             {/* CONTENEDOR FLOTANTE PARA BOTONES (WhatsApp + IG) */}
             <div style={{
                 position: 'fixed', 
-                bottom: '25px', 
-                left: '25px', 
+                bottom: '20px', // Separamos un poco más del borde inferior
+                left: '20px', // Separamos un poco más del borde izquierdo
                 right: 'auto', 
                 zIndex: 1000,
-                display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '10px', 
+                display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '8px', // Reducimos el espacio entre ellos
             }}>
                 
-                {/* BOTÓN DE WHATSAPP (Ajustado) */}
+                {/* BOTÓN DE WHATSAPP (Ajustado el tamaño) */}
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{
                     display: 'inline-block', backgroundColor: '#25D366', 
-                    padding: '10px 12px', 
-                    borderRadius: '50%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)', 
+                    padding: '8px 10px', // Reducimos el padding
+                    borderRadius: '50%', boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', // Sombra más sutil
                     lineHeight: '1', 
-                    fontSize: '24px', 
+                    fontSize: '20px', // Reducimos el tamaño de la fuente (el icono)
                 }}>
                     📞 
                 </a>
 
-                {/* BOTÓN DE INSTAGRAM (Ajustado) */}
+                {/* BOTÓN DE INSTAGRAM (Ajustado el tamaño) */}
                 <a href={instagramLink} target="_blank" rel="noopener noreferrer" style={{
                     display: 'inline-block',
                     background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
-                    padding: '10px 12px', 
-                    borderRadius: '30%', 
-                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.4)', 
+                    padding: '8px 10px', // Reducimos el padding
+                    borderRadius: '50%', // Lo hacemos completamente redondo
+                    boxShadow: '0 3px 6px rgba(0, 0, 0, 0.4)', // Sombra más sutil
                     lineHeight: '1', 
-                    fontSize: '24px', 
+                    fontSize: '20px', // Reducimos el tamaño de la fuente (el icono)
                 }}>
                     📸 
                 </a>
@@ -540,5 +539,4 @@ function Home() {
     );
 }
 
-// Exportación final
-export default Home;
+// export default Home; // Esto debe ir al final del archivo

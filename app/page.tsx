@@ -1,9 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function NehuenFitLanding() {
   return (
-    export default function NehuenFitLanding() {
-  return (
+
     <div className="min-h-screen bg-[#0f172a] text-[#e5e7eb] font-sans"> 
     {/* ^ ESE es el color de fondo oscuro que definimos */}
       

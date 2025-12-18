@@ -197,7 +197,8 @@ export default function NehuenFitLanding() {
     </form>
   </div>
 </section>
-          
-    </div>
+
+          </div>
   );
-}
+      }
+      

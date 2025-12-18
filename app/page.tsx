@@ -2,6 +2,11 @@ import React from 'react';
 
 export default function NehuenFitLanding() {
   return (
+    export default function NehuenFitLanding() {
+  return (
+    <div className="min-h-screen bg-[#0f172a] text-[#e5e7eb] font-sans"> 
+    {/* ^ ESE es el color de fondo oscuro que definimos */}
+      
     <div className="min-h-screen bg-[#0f172a] text-[#e5e7eb] font-sans selection:bg-[#22c55e] selection:text-[#0f172a]">
       
       {/* BOTONES FLOTANTES */}
@@ -20,6 +25,16 @@ export default function NehuenFitLanding() {
       {/* HERO SECTION */}
       <header className="py-20 px-6 text-center">
         <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center mb-6">
+  <Image 
+    src="/logo.png" 
+    alt="Nehuen Fit Logo" 
+    width={100} 
+    height={100} 
+    priority 
+  />
+</div>
+          
           <p className="text-[#9ca3af] text-lg md:text-[22px] mb-4">NEHUEN FIT / Personal Trainer</p>
           <h1 className="text-[#22c55e] text-3xl md:text-[48px] font-bold leading-tight mb-6">
             Entrenamientos simples, efectivos y adaptados a vos
@@ -85,24 +100,104 @@ export default function NehuenFitLanding() {
         </div>
       </section>
 
-      {/* CIERRE Y FORMULARIO */}
       <section id="formulario" className="py-20 px-6 bg-[#1e293b]">
-        <div className="max-w-md mx-auto text-center">
-          <h2 className="text-[#22c55e] text-[32px] font-bold mb-4">Empezá hoy</h2>
-          <p className="text-[#9ca3af] text-[15px] mb-8">Completá el formulario para tu rutina personalizada.</p>
-          
-          <form action="https://formspree.io/f/nehuen.ezequiel@gmail.com" method="POST" className="flex flex-col gap-4">
-            <input type="text" name="name" placeholder="Nombre" required className="p-3 rounded bg-[#0f172a] border border-[#334155] focus:border-[#22c55e] outline-none" />
-            <input type="email" name="email" placeholder="Email" required className="p-3 rounded bg-[#0f172a] border border-[#334155] focus:border-[#22c55e] outline-none" />
-            <textarea name="message" placeholder="¿Objetivo?" className="p-3 h-32 rounded bg-[#0f172a] border border-[#334155] focus:border-[#22c55e] outline-none resize-none"></textarea>
-            <button type="submit" className="bg-[#16a34a] py-4 rounded-lg font-bold hover:bg-[#15803d]">QUIERO MI RUTINA</button>
-          </form>
+  <div className="max-w-md mx-auto text-center">
+    {/* TÍTULO DEL FORMULARIO */}
+    <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-semibold mb-4">
+      Armemos tu rutina
+    </h2>
+    
+    {/* TEXTO INTRODUCTORIO */}
+    <p className="text-[#e5e7eb] text-[16px] md:text-[18px] mb-10 leading-relaxed">
+      Completá estos datos y voy a prepararte una rutina <br className="hidden md:block" /> 
+      adaptada a tu objetivo y disponibilidad.
+    </p>
+    
+    <form 
+      action="https://formspree.io/f/nehuen.ezequiel@gmail.com" 
+      method="POST" 
+      className="flex flex-col gap-5 text-left"
+    >
+      {/* 1️⃣ Nombre */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">Nombre</label>
+        <input type="text" name="nombre" required placeholder="Ej: Juan Pérez" className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none" />
+      </div>
 
-          <footer className="mt-20">
-            <p className="text-[#6b7280] text-[13px]">© Nehuen Fit · Todos los derechos reservados</p>
-          </footer>
-        </div>
-      </section>
+      {/* 2️⃣ Edad */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">Edad</label>
+        <input type="number" name="edad" required placeholder="Ej: 32" className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none" />
+      </div>
+
+      {/* 3️⃣ Objetivo */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">¿Cuál es tu objetivo?</label>
+        <select name="objetivo" required className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none cursor-pointer">
+          <option value="Bajar de peso">Bajar de peso</option>
+          <option value="Ganar fuerza">Ganar fuerza</option>
+          <option value="Mejorar condición física">Mejorar condición física</option>
+          <option value="Mantenerme activo/a">Mantenerme activo/a</option>
+        </select>
+      </div>
+
+      {/* 4️⃣ Nivel de entrenamiento */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">¿Cuál es tu nivel?</label>
+        <select name="nivel" required className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none cursor-pointer">
+          <option value="Principiante">Principiante</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+      </div>
+
+      {/* 5️⃣ Días de entrenamiento */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">¿Cuántos días por semana podés entrenar?</label>
+        <select name="dias" required className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none cursor-pointer">
+          <option value="2 días">2 días</option>
+          <option value="3 días">3 días</option>
+          <option value="4 días">4 días</option>
+          <option value="5 días">5 días</option>
+        </select>
+      </div>
+
+      {/* 6️⃣ Tiempo disponible */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">¿Cuánto tiempo por sesión?</label>
+        <select name="tiempo" required className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none cursor-pointer">
+          <option value="20–30 minutos">20–30 minutos</option>
+          <option value="30–45 minutos">30–45 minutos</option>
+          <option value="45–60 minutos">45–60 minutos</option>
+        </select>
+      </div>
+
+      {/* 7️⃣ Lesiones o molestias */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">¿Tenés alguna lesión o molestia?</label>
+        <input type="text" name="lesiones" placeholder="Opcional" className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none" />
+      </div>
+
+      {/* 8️⃣ Contacto */}
+      <div className="flex flex-col gap-1">
+        <label className="text-sm font-medium text-[#e5e7eb]">Email o WhatsApp</label>
+        <input type="text" name="contacto" required placeholder="Ej: micorreo@email.com o 11 1234 5678" className="p-3 rounded-lg bg-[#0f172a] border border-[#334155] text-white focus:border-[#22c55e] outline-none" />
+      </div>
+
+      {/* BOTÓN DEL FORMULARIO */}
+      <button type="submit" className="mt-4 bg-[#16a34a] text-[#ffffff] text-[16px] md:text-[18px] py-4 rounded-lg font-bold hover:bg-[#15803d] transition-all">
+        ENVIAR MIS DATOS
+      </button>
+
+      {/* TEXTOS DE CONFIANZA Y EXTRA */}
+      <div className="mt-4 space-y-1 text-center">
+        <p className="text-[#9ca3af] text-[12px] md:text-[13px]">No compartimos tu información con terceros.</p>
+        <p className="text-[#9ca3af] text-[13px] md:text-[14px] font-medium">📩 Respuesta en menos de 24 hs</p>
+      </div>
+    </form>
+  </div>
+</section>
+          
     </div>
   );
 }

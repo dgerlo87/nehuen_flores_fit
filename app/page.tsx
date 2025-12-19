@@ -7,7 +7,7 @@ export default function NehuenFitLanding() {
       <div className="fixed inset-0 z-0 opacity-20">
         <Image 
           src="/fondo.jpg" 
-          alt="Entrenamiento Nehuen Fit" 
+          alt="Fondo Nehuen Fit" 
           fill 
           className="object-cover"
           priority
@@ -18,13 +18,13 @@ export default function NehuenFitLanding() {
       <div className="relative z-10">
         <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
           <a href="https://instagram.com/nehuenfit" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold shadow-lg transition-transform hover:scale-110" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}>IG</a>
-          <a href="https://wa.me/5491122513909?text=Hola%20Nehuen" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center text-white text-2xl shadow-lg transition-transform hover:scale-110">WA</a>
+          <a href="https://wa.me/5491172145711?text=Hola%20Nehuen" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center text-white text-2xl shadow-lg transition-transform hover:scale-110">WA</a>
         </div>
 
         <header className="py-20 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
-              <Image src="/logo.png" alt="Logo Nehuen Fit" width={130} height={130} priority />
+              <Image src="/logo.png" alt="Logo Nehuen Fit" width={120} height={120} priority />
             </div>
             <p className="text-[#22c55e] text-lg mb-2 uppercase tracking-widest font-bold">Nehuen Fit / Personal Trainer</p>
             <h1 className="text-white text-4xl md:text-6xl font-bold mb-6 italic uppercase">Entrenamientos simples y efectivos</h1>

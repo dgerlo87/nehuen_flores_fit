@@ -195,9 +195,12 @@ export default function NehuenFitLanding() {
         <p className="text-[#9ca3af] text-[13px] md:text-[14px] font-medium">📩 Respuesta en menos de 24 hs</p>
       </div>
     </form>
-  </div>
-</section>
+            <footer className="mt-20">
+            <p className="text-[#6b7280] text-[13px]">© {new Date().getFullYear()} Nehuen Fit · Todos los derechos reservados</p>
+          </footer>
+        </div>
+      </section>
     </div>
   );
-}
-
+      }
+      

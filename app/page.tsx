@@ -19,11 +19,6 @@ export default function NehuenFitLanding() {
       </div>
 
       <div className="relative z-10">
-        {/* Aquí sigue el resto de tu código (Logo, Títulos, Formulario...) */}
-        
-
-      
-      <div className="relative z-10">
         <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
           <a href="https://instagram.com/nehuenfit" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold shadow-lg transition-transform hover:scale-110" style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}>IG</a>
           <a href="https://wa.me/5491172145711?text=Hola%20Nehuen" target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-full bg-[#22c55e] flex items-center justify-center text-white text-2xl shadow-lg transition-transform hover:scale-110">WA</a>

@@ -106,6 +106,37 @@ export default function NehuenFitLanding() {
           </div>
         </section>
 
+                {/* SECCIÓN: VIDEOS / RUTINAS */}
+        <section className="py-16 px-6 max-w-4xl mx-auto text-center">
+          {/* TÍTULO */}
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-6 uppercase italic tracking-tight">
+            Rutinas y ejercicios en video
+          </h2>
+          
+          {/* TEXTO PRINCIPAL */}
+          <p className="text-[#e5e7eb] text-[16px] md:text-[18px] mb-10 max-w-2xl mx-auto leading-relaxed">
+            Vas a encontrar ejercicios explicados paso a paso para entrenar con buena técnica y de forma segura.
+          </p>
+
+          {/* CONTENEDOR DE VIDEO "PRÓXIMAMENTE" */}
+          <div className="bg-[#1e293b]/60 border-2 border-dashed border-[#334155] rounded-3xl p-12 flex flex-col items-center gap-4 shadow-2xl backdrop-blur-sm">
+            <div className="text-5xl mb-2">🎥</div>
+            
+            <h3 className="text-[#ffffff] text-[18px] md:text-[20px] font-bold uppercase tracking-wider">
+              Contenido en preparación
+            </h3>
+            
+            <p className="text-[#9ca3af] text-[14px] md:text-[15px] max-w-sm">
+              Próximamente vas a poder acceder a rutinas completas en video.
+            </p>
+
+            <div className="mt-4 flex items-center gap-2 text-[#9ca3af] text-[14px] md:text-[15px] bg-[#0f172a]/80 px-4 py-2 rounded-full">
+              <span>🎧</span> Audio explicativo disponible para acompañar el video.
+            </div>
+          </div>
+        </section>
+            
+
 
                 <section id="formulario" className="py-24 px-6 bg-[#1e293b]/95">
           <div className="max-w-md mx-auto">

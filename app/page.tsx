@@ -3,16 +3,24 @@ import Image from 'next/image';
 
 export default function NehuenFitLanding() {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-[#e5e7eb] font-sans relative">
-      <div className="fixed inset-0 z-0 opacity-20">
+    <div className="min-h-screen bg-[#0f172a] text-[#e5e7eb] font-sans relative border-[10px] border-[#22c55e]">
+      
+      {/* IMAGEN DE FONDO ESPECÍFICA */}
+      <div className="fixed inset-0 z-0">
         <Image 
-          src="/fondo.jpg" 
+          src="/IMG-20251215-WA0059.jpg" 
           alt="Fondo Nehuen Fit" 
           fill 
-          className="object-cover"
+          className="object-cover opacity-30" 
           priority
         />
+        {/* Capa extra de oscuridad para que el texto resalte */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/60 via-transparent to-[#0f172a]" />
       </div>
+
+      <div className="relative z-10">
+        {/* Aquí sigue el resto de tu código (Logo, Títulos, Formulario...) */}
+        
 
       
       <div className="relative z-10">

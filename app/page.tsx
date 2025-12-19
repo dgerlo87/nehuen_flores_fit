@@ -177,6 +177,74 @@ export default function NehuenFitLanding() {
           </a>
         </section>
 
+                {/* --- SECCIONES NUEVAS SOLICITADAS --- */}
+
+        {/* 1. VIDEOS */}
+        <section className="py-12 px-6 max-w-4xl mx-auto text-center">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-6 uppercase italic">
+            Rutinas y ejercicios en video
+          </h2>
+          <p className="text-[#e5e7eb] text-[16px] md:text-[18px] mb-10 max-w-2xl mx-auto">
+            Vas a encontrar ejercicios explicados paso a paso para entrenar con buena técnica y de forma segura.
+          </p>
+          <div className="bg-[#1e293b]/60 border-2 border-dashed border-[#334155] rounded-3xl p-10 flex flex-col items-center gap-4 backdrop-blur-sm">
+            <span className="text-4xl">🎥</span>
+            <h3 className="text-white font-bold uppercase tracking-widest">Contenido en preparación</h3>
+            <p className="text-[#9ca3af] text-[14px] md:text-[15px]">Próximamente vas a poder acceder a rutinas completas en video.</p>
+            <div className="text-[#9ca3af] text-[14px] md:text-[15px] bg-[#0f172a]/80 px-4 py-2 rounded-full border border-[#334155]">
+              🎧 Audio explicativo disponible para acompañar el video.
+            </div>
+          </div>
+        </section>
+
+        {/* 2. TESTIMONIOS */}
+        <section className="py-12 px-6 max-w-4xl mx-auto">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-10 text-center uppercase italic tracking-tight">
+            Resultados reales
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl backdrop-blur-sm">
+              <p className="text-[#e5e7eb] text-[15px] md:text-[16px] italic mb-4 leading-relaxed">
+                “Entreno de forma constante y sin lesionarme. Nehuen adapta las rutinas a mi nivel y objetivos.”
+              </p>
+              <p className="text-[#9ca3af] font-bold uppercase tracking-widest text-xs">— Martín</p>
+            </div>
+            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl backdrop-blur-sm">
+              <p className="text-[#e5e7eb] text-[15px] md:text-[16px] italic mb-4 leading-relaxed">
+                “Volví a entrenar después de mucho tiempo. Las rutinas son claras y fáciles de seguir.”
+              </p>
+              <p className="text-[#9ca3af] font-bold uppercase tracking-widest text-xs">— Laura</p>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. SOBRE MÍ */}
+        <section className="py-16 px-6 max-w-4xl mx-auto text-center border-t border-[#334155]">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 uppercase italic tracking-tight">
+            Entrená con confianza
+          </h2>
+          <div className="space-y-6 mb-10 max-w-2xl mx-auto">
+            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
+              Soy <span className="text-white font-bold text-xl">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar de forma segura, progresiva y adaptada a tu nivel, sin presiones y con un plan claro.
+            </p>
+            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
+              Trabajo con rutinas simples y efectivas para que puedas sostener el entrenamiento en el tiempo y ver resultados reales.
+            </p>
+            <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic font-serif mt-6">
+              "No se trata de entrenar más, sino de entrenar mejor."
+            </p>
+          </div>
+          <a 
+            href="#formulario" 
+            className="inline-block bg-[#16a34a] text-white px-10 py-4 rounded-lg font-black uppercase shadow-lg hover:bg-[#22c55e] transition-all"
+          >
+            QUIERO MI RUTINA
+          </a>
+        </section>
+
+        {/* --- FIN DE SECCIONES NUEVAS --- */}
+
+
             
 
 

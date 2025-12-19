@@ -39,9 +39,20 @@ export default function NehuenFitLanding() {
             </p>
 
                         <p className="text-xl mb-10 max-w-xl mx-auto text-[#9ca3af]">Alcanzá tu mejor versión con un plan diseñado exclusivamente para vos.</p>
-            <a href="#formulario" className="inline-block bg-[#16a34a] text-white px-10 py-5 rounded-lg font-extrabold text-xl hover:bg-[#22c55e] transition-all shadow-lg scale-105">
-              QUIERO MI RUTINA PERSONALIZADA
-            </a>
+                    {/* BOTÓN Y TEXTO CHICO */}
+        <div className="flex flex-col items-center gap-3 mb-8">
+          <a 
+            href="#formulario" 
+            className="bg-[#16a34a] text-[#ffffff] px-8 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-wide shadow-lg"
+          >
+            QUIERO MI RUTINA
+          </a>
+          
+          <p className="text-[#9ca3af] text-[14px] md:text-[15px] font-medium flex items-center gap-2">
+            ⏱️ Te lleva menos de 1 minuto
+          </p>
+        </div>
+            
           </div>
         </header>
 

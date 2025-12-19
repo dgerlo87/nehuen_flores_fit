@@ -135,6 +135,48 @@ export default function NehuenFitLanding() {
             </div>
           </div>
         </section>
+
+                {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
+        <section className="py-20 px-6 max-w-4xl mx-auto text-center border-t border-[#334155]">
+          {/* TÍTULO CON ICONO */}
+          <div className="flex justify-center items-center gap-3 mb-8">
+            <span className="text-[#22c55e] text-3xl">🏋️‍♂️</span>
+            <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black uppercase italic tracking-tight">
+              Entrená con confianza
+            </h2>
+            <span className="text-[#22c55e] text-3xl">🏋️‍♂️</span>
+          </div>
+          
+          {/* TEXTO PRINCIPAL */}
+          <div className="space-y-6 mb-10 max-w-2xl mx-auto">
+            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
+              Soy <span className="text-white font-bold text-xl">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar
+              de forma segura, progresiva y adaptada a tu nivel, sin presiones 
+              y con un plan claro.
+            </p>
+            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed font-light">
+              Trabajo con rutinas simples y efectivas para que puedas sostener
+              el entrenamiento en el tiempo y ver resultados reales.
+            </p>
+          </div>
+
+          {/* FRASE SECUNDARIA ESTILO FIRMA */}
+          <div className="mb-12">
+            <p className="text-[#9ca3af] text-[15px] md:text-[16px] italic font-serif">
+              "No se trata de entrenar más, sino de entrenar mejor."
+            </p>
+            <div className="w-16 h-[2px] bg-[#22c55e] mx-auto mt-4 opacity-50"></div>
+          </div>
+
+          {/* BOTÓN DE ACCIÓN */}
+          <a 
+            href="#formulario" 
+            className="inline-block bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(22,163,74,0.4)]"
+          >
+            QUIERO MI RUTINA
+          </a>
+        </section>
+
             
 
 

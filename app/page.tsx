@@ -83,6 +83,30 @@ export default function NehuenFitLanding() {
           </div>
         </section>
 
+                {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
+        <section className="py-16 px-6 max-w-4xl mx-auto">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 text-center uppercase italic tracking-tight">
+            ¿Qué vas a encontrar en Nehuen Fit?
+          </h2>
+          
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              "Rutinas personalizadas según tu objetivo y nivel",
+              "Ejercicios en video explicados paso a paso",
+              "Organización semanal para entrenar sin improvisar",
+              "Acompañamiento real para que no abandones"
+            ].map((item, index) => (
+              <div key={index} className="flex items-start gap-3 bg-[#1e293b]/40 p-4 rounded-xl border border-[#22c55e]/20">
+                <span className="text-[#22c55e] font-bold text-xl">✓</span>
+                <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-snug">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
                 <section id="formulario" className="py-24 px-6 bg-[#1e293b]/95">
           <div className="max-w-md mx-auto">
             <h2 className="text-[#22c55e] text-3xl font-black mb-10 text-center italic uppercase tracking-tighter">ARMEMOS TU PLAN</h2>

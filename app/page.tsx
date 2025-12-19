@@ -24,7 +24,8 @@ export default function NehuenFitLanding() {
         <header className="py-20 px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
-              <Image src="/IMG-20251216-WA0001.jpg" alt="Logo Nehuen Fit" width={120} height={120} priority />
+              <Image src="/IMG-20251216-WA0001.jpg" alt="Logo Nehuen Fit" width={120} height={120} priority className="rounded-full border-4 border-[#22c55e] p-1 shadow-[0_0_15px_rgba(34,197,94,0.5)]" 
+                 />
             </div>
             <p className="text-[#22c55e] text-lg mb-2 uppercase tracking-widest font-bold">Nehuen Fit / Personal Trainer</p>
             <h1 className="text-white text-4xl md:text-6xl font-bold mb-6 italic uppercase">Entrenamientos simples y efectivos</h1>

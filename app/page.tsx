@@ -32,6 +32,11 @@ export default function NehuenFitLanding() {
             </div>
             <p className="text-[#22c55e] text-lg mb-2 uppercase tracking-widest font-bold">Nehuen Fit / Personal Trainer</p>
             <h1 className="text-white text-4xl md:text-6xl font-bold mb-6 italic uppercase">Entrenamientos simples y efectivos</h1>
+            
+            <p className="text-[#e5e7eb] text-[18px] md:text-[20px] font-medium mt-4 mb-8 max-w-md mx-auto leading-relaxed">
+                Completá el formulario y armamos tu rutina según tu objetivo, 
+                nivel y disponibilidad.
+            </p>
 
                         <p className="text-xl mb-10 max-w-xl mx-auto text-[#9ca3af]">Alcanzá tu mejor versión con un plan diseñado exclusivamente para vos.</p>
             <a href="#formulario" className="inline-block bg-[#16a34a] text-white px-10 py-5 rounded-lg font-extrabold text-xl hover:bg-[#22c55e] transition-all shadow-lg scale-105">

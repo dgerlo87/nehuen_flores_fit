@@ -83,7 +83,9 @@ export default function NehuenFitLanding() {
           </div>
         </section>
 
-                {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
+  
+          <div className="space-y-6 mb-10 max-w-2xl mx-auto">
+            <p className="text-[#e5e7              {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
         <section className="py-16 px-6 max-w-4xl mx-auto">
           <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 text-center uppercase italic tracking-tight">
             ¿Qué vas a encontrar en Nehuen Fit?
@@ -147,9 +149,7 @@ export default function NehuenFitLanding() {
             <span className="text-[#22c55e] text-3xl">🏋️‍♂️</span>
           </div>
           
-          {/* TEXTO PRINCIPAL */}
-          <div className="space-y-6 mb-10 max-w-2xl mx-auto">
-            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
+          {/* TEXTO PRINCIPAL */}eb] text-[16px] md:text-[18px] leading-relaxed">
               Soy <span className="text-white font-bold text-xl">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar
               de forma segura, progresiva y adaptada a tu nivel, sin presiones 
               y con un plan claro.
@@ -158,28 +158,27 @@ export default function NehuenFitLanding() {
               Trabajo con rutinas simples y efectivas para que puedas sostener
               el entrenamiento en el tiempo y ver resultados reales.
             </p>
+        {/* 1. ¿QUÉ VAS A ENCONTRAR? */}
+        <section className="py-12 px-6 max-w-4xl mx-auto">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 text-center uppercase italic">
+            ¿Qué vas a encontrar?
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              "Rutinas personalizadas según tu objetivo",
+              "Ejercicios en video paso a paso",
+              "Organización semanal para entrenar",
+              "Acompañamiento real para no abandonar"
+            ].map((item, index) => (
+              <div key={index} className="flex items-start gap-3 bg-[#1e293b]/40 p-4 rounded-xl border border-[#22c55e]/20 backdrop-blur-sm">
+                <span className="text-[#22c55e] font-bold text-xl">✓</span>
+                <p className="text-[#e5e7eb] text-[16px] md:text-[17px]">{item}</p>
+              </div>
+            ))}
           </div>
-
-          {/* FRASE SECUNDARIA ESTILO FIRMA */}
-          <div className="mb-12">
-            <p className="text-[#9ca3af] text-[15px] md:text-[16px] italic font-serif">
-              "No se trata de entrenar más, sino de entrenar mejor."
-            </p>
-            <div className="w-16 h-[2px] bg-[#22c55e] mx-auto mt-4 opacity-50"></div>
-          </div>
-
-          {/* BOTÓN DE ACCIÓN */}
-          <a 
-            href="#formulario" 
-            className="inline-block bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(22,163,74,0.4)]"
-          >
-            QUIERO MI RUTINA
-          </a>
         </section>
 
-                {/* --- SECCIONES NUEVAS SOLICITADAS --- */}
-
-        {/* 1. VIDEOS */}
+        {/* 2. VIDEOS / RUTINAS */}
         <section className="py-12 px-6 max-w-4xl mx-auto text-center">
           <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-6 uppercase italic">
             Rutinas y ejercicios en video
@@ -187,62 +186,67 @@ export default function NehuenFitLanding() {
           <p className="text-[#e5e7eb] text-[16px] md:text-[18px] mb-10 max-w-2xl mx-auto">
             Vas a encontrar ejercicios explicados paso a paso para entrenar con buena técnica y de forma segura.
           </p>
-          <div className="bg-[#1e293b]/60 border-2 border-dashed border-[#334155] rounded-3xl p-10 flex flex-col items-center gap-4 backdrop-blur-sm">
+          <div className="bg-[#1e293b]/60 border-2 border-dashed border-[#334155] rounded-3xl p-10 flex flex-col items-center gap-4">
             <span className="text-4xl">🎥</span>
-            <h3 className="text-white font-bold uppercase tracking-widest">Contenido en preparación</h3>
+            <h3 className="text-white font-bold uppercase">Contenido en preparación</h3>
             <p className="text-[#9ca3af] text-[14px] md:text-[15px]">Próximamente vas a poder acceder a rutinas completas en video.</p>
             <div className="text-[#9ca3af] text-[14px] md:text-[15px] bg-[#0f172a]/80 px-4 py-2 rounded-full border border-[#334155]">
-              🎧 Audio explicativo disponible para acompañar el video.
+              🎧 Audio explicativo disponible.
             </div>
           </div>
         </section>
 
-        {/* 2. TESTIMONIOS */}
+        {/* 3. TESTIMONIOS */}
         <section className="py-12 px-6 max-w-4xl mx-auto">
-          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-10 text-center uppercase italic tracking-tight">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-10 text-center uppercase italic">
             Resultados reales
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl backdrop-blur-sm">
-              <p className="text-[#e5e7eb] text-[15px] md:text-[16px] italic mb-4 leading-relaxed">
-                “Entreno de forma constante y sin lesionarme. Nehuen adapta las rutinas a mi nivel y objetivos.”
+            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl">
+              <p className="text-[#e5e7eb] text-[15px] italic mb-4">
+                “Entreno de forma constante y sin lesionarme. Nehuen adapta las rutinas a mi nivel.”
               </p>
-              <p className="text-[#9ca3af] font-bold uppercase tracking-widest text-xs">— Martín</p>
+              <p className="text-[#9ca3af] font-bold uppercase text-xs">— Martín</p>
             </div>
-            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl backdrop-blur-sm">
-              <p className="text-[#e5e7eb] text-[15px] md:text-[16px] italic mb-4 leading-relaxed">
-                “Volví a entrenar después de mucho tiempo. Las rutinas son claras y fáciles de seguir.”
+            <div className="bg-[#1e293b]/50 p-6 rounded-2xl border-r-4 border-[#22c55e] text-right shadow-xl">
+              <p className="text-[#e5e7eb] text-[15px] italic mb-4">
+                “Volví a entrenar después de mucho tiempo. Las rutinas son claras y fáciles.”
               </p>
-              <p className="text-[#9ca3af] font-bold uppercase tracking-widest text-xs">— Laura</p>
+              <p className="text-[#9ca3af] font-bold uppercase text-xs">— Laura</p>
             </div>
           </div>
         </section>
 
-        {/* 3. SOBRE MÍ */}
+        {/* 4. SOBRE MÍ */}
         <section className="py-16 px-6 max-w-4xl mx-auto text-center border-t border-[#334155]">
-          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 uppercase italic tracking-tight">
+          <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 uppercase italic">
             Entrená con confianza
           </h2>
-          <div className="space-y-6 mb-10 max-w-2xl mx-auto">
-            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
-              Soy <span className="text-white font-bold text-xl">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar de forma segura, progresiva y adaptada a tu nivel, sin presiones y con un plan claro.
-            </p>
-            <p className="text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
-              Trabajo con rutinas simples y efectivas para que puedas sostener el entrenamiento en el tiempo y ver resultados reales.
-            </p>
-            <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic font-serif mt-6">
-              "No se trata de entrenar más, sino de entrenar mejor."
-            </p>
+          <div className="space-y-6 mb-10 max-w-2xl mx-auto text-[#e5e7eb]">
+            <p>Soy <span className="text-white font-bold">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar de forma segura y adaptada a tu nivel.</p>
+            <p className="text-[#9ca3af] text-[14px] italic">"No se trata de entrenar más, sino de entrenar mejor."</p>
           </div>
-          <a 
-            href="#formulario" 
-            className="inline-block bg-[#16a34a] text-white px-10 py-4 rounded-lg font-black uppercase shadow-lg hover:bg-[#22c55e] transition-all"
-          >
+          <a href="#formulario" className="inline-block bg-[#16a34a] text-white px-10 py-4 rounded-lg font-black uppercase shadow-lg">
             QUIERO MI RUTINA
           </a>
         </section>
 
-        {/* --- FIN DE SECCIONES NUEVAS --- */}
+        {/* 5. FORMULARIO FINAL */}
+        <section id="formulario" className="py-20 px-6 bg-[#0f172a]/95">
+          <div className="max-w-md mx-auto">
+            <h2 className="text-[#22c55e] text-[28px] font-black mb-8 text-center uppercase italic">
+              Armemos tu plan
+            </h2>
+            <form action="https://formspree.io/f/Fitnehuen@gmail.com" method="POST" className="flex flex-col gap-4">
+              <input type="text" name="name" placeholder="Nombre" required className="p-4 rounded-xl bg-[#1e293b] text-white border border-[#334155] outline-none" />
+              <input type="text" name="contact" placeholder="WhatsApp o Email" required className="p-4 rounded-xl bg-[#1e293b] text-white border border-[#334155] outline-none" />
+              <button type="submit" className="bg-[#22c55e] text-[#0f172a] font-black py-4 rounded-xl uppercase hover:bg-white transition-all">
+                ENVIAR FORMULARIO
+              </button>
+            </form>
+          </div>
+        </section>
+
 
 
             

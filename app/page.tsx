@@ -202,5 +202,5 @@ export default function NehuenFitLanding() {
       </section>
     </div>
   );
-      }
+}
       

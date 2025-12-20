@@ -258,7 +258,12 @@ export default function Page() {
     </p>
     
   </div>
-</footer>
+    </footer>
+      </div>
+    </div>
+  );
+}
+
         
 
         

@@ -280,5 +280,5 @@ export default function Page() {
 
                 </footer>
   );
-    }
+}
     

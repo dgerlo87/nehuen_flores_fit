@@ -267,20 +267,25 @@ export default function Page() {
           <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
 
           {/* TU MARCA Y LOGO (Justo abajo del separador) */}
-          <div className="mb-8">
-            <img src="/IMG-20251216-WA0001.jpg" className="h-12 mx-auto mb-4" />
-            <p className="text-[#9ca3af] text-[18px] font-medium uppercase">Nehuen Fit</p>
-            <p className="text-[#9ca3af] text-[18px] font-medium uppercase">Personal Trainer</p>
-          </div>
+<div className="mb-8">
+  <img
+    src="/IMG-20251216-WA0001.jpg"
+    className="h-12 mx-auto mb-4"
+    alt="Nehuen Fit Logo"
+  />
+  <p className="text-[#9ca3af] text-[18px] font-medium uppercase">
+    Nehuen Fit
+  </p>
+  <p className="text-[#9ca3af] text-[18px] font-medium uppercase">
+    Personal Trainer
+  </p>
+</div>
 
-          {/* TEXTO LEGAL (Al final de todo) */}
-          <p className="text-[#6b7280] text-[12px]">
-            © Nehuen Fit · Todos los derechos reservados
-          </p>
+{/* TEXTO LEGAL (Al final de todo) */}
+<p className="text-[#6b7280] text-[12px]">
+  © Nehuen Fit · Todos los derechos reservados
+</p>
 
-                </footer>
-
-              </div>
-           );
-        }
-    
+</footer>
+</div>
+);

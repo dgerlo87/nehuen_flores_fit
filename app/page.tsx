@@ -76,7 +76,7 @@ export default function NehuenFitLanding() {
               </div>
             </div>
             <div className="text-center mb-10">
-                        <a 
+            </div <a>
             href="#formulario" 
             className="bg-[#16a34a] text-white px-8 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-wide shadow-lg inline-block"
           >

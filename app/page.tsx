@@ -278,10 +278,11 @@ export default function Page() {
             © Nehuen Fit · Todos los derechos reservados
           </p>
 
-        </footer>
-
-      </div> {/* Cierra el max-w */}
-    </div>   {/* Cierra el min-h-screen */}
+            </footer>
+      </div>
+    </div>
   );
         }
         
+
+      

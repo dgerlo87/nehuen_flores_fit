@@ -85,7 +85,8 @@ export default function NehuenFitLanding() {
 
   
           <div className="space-y-6 mb-10 max-w-2xl mx-auto">
-            <p className="text-[#e5e7              {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
+            <p className="text-[#e5e7eb]"> </p>Soy Nehuen, personal trainer, enfocado en ayudarte a entrenar de forma segura y adaptada a tu nivel.</p>
+        
         <section className="py-16 px-6 max-w-4xl mx-auto">
           <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-8 text-center uppercase italic tracking-tight">
             ¿Qué vas a encontrar en Nehuen Fit?

@@ -75,15 +75,14 @@ export default function NehuenFitLanding() {
                 <span className="text-[#22c55e] font-bold uppercase">— Laura G.</span>
               </div>
             </div>
-            <div className="text-center mb-10">
-            </div <a>
-            href="#formulario" 
-            className="bg-[#16a34a] text-white px-8 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-wide shadow-lg inline-block"
-          >
-            QUIERO MI RUTINA
-          </a>
-          <p className="text-[#9ca3af] text-[14px] md:text-[15px] font-medium mt-4">⏱️ Te lleva menos de 1 minuto</p>
-        </header>
+                         <div className="flex flex-col items-center gap-3">
+              <a 
+                href="#formulario" 
+                className="bg-[#16a34a] text-white px-8 py-4 rounded-lg font-black text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all uppercase tracking-wide shadow-lg inline-block"
+              >
+                QUIERO MI RUTINA
+              </a>
+                         </header>
 
         {/* SECCIÓN VIDEOS */}
         <section className="py-12 px-6 max-w-4xl mx-auto text-center">

@@ -225,68 +225,57 @@ export default function Page() {
   </div>
 </section>
         
-        {/* FOOTER / CIERRE FINAL */}
-<footer className="py-16 px-6 bg-[#0f172a] border-t border-[#334155] text-center">
-  <div className="max-w-2xl mx-auto">
-    
-    {/* TÍTULO DE CIERRE */}
-    <h2 className="text-[#22c55e] text-[20px] md:text-[22px] font-bold mb-4 uppercase italic">
-      Empezá hoy
-    </h2>
-
-    {/* TEXTO INFORMATIVO */}
-    <p className="text-[#9ca3af] text-[14px] md:text-[15px] mb-8 leading-relaxed">
-      Completá el formulario y empezá a entrenar con una rutina pensada para vos.
-    </p>
-
-    {/* BOTÓN FINAL DE ACCIÓN */}
-    <div className="mb-12">
-      <a 
-        href="#formulario" 
-        className="bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-xl font-bold text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all shadow-xl uppercase tracking-wide inline-block"
-      >
-        QUIERO MI RUTINA
-      </a>
-    </div>
-
-        
-
-        {/* 1. FORMULARIO (Aquí es donde la gente completa sus datos) */}
-        <section id="formulario" className="py-20 px-6 bg-[#0f172a]">
-           {/* ... código del formulario con los campos Nombre, Objetivo, etc. ... */}
+        {/* SECCIÓN: FORMULARIO (Donde la gente completa sus datos) */}
+        <section id="formulario" className="py-20 px-6 bg-[#0f172a] border-t border-[#334155]">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-8 text-center uppercase italic">
+              Completá tu ficha
+            </h2>
+            <form className="grid grid-cols-1 gap-6">
+              <div>
+                <label className="block text-[#9ca3af] mb-2 text-sm">Nombre Completo</label>
+                <input type="text" className="w-full bg-black border border-[#334155] p-4 rounded-xl focus:border-[#22c55e] outline-none transition-all" placeholder="Ej: Juan Pérez" />
+              </div>
+              <div>
+                <label className="block text-[#9ca3af] mb-2 text-sm">¿Cuál es tu objetivo?</label>
+                <select className="w-full bg-black border border-[#334155] p-4 rounded-xl focus:border-[#22c55e] outline-none transition-all text-white">
+                  <option>Ganar masa muscular</option>
+                  <option>Bajar de peso / Definición</option>
+                  <option>Mejorar salud y postura</option>
+                  <option>Rendimiento deportivo</option>
+                </select>
+              </div>
+              <button className="bg-[#16a34a] text-white p-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] transition-all shadow-lg mt-4">
+                Enviar mis datos
+              </button>
+            </form>
+          </div>
         </section>
 
-        {/* 2. FOOTER (El cierre definitivo de la web) */}
-        <footer className="py-16 px-6 text-center border-t border-[#334155]">
-          
-          {/* Título y Botón final */}
-          <h2 className="text-[#22c55e] text-[20px] font-bold uppercase italic">Empezá hoy</h2>
-          {/* ... botón ... */}
-
-          {/* EL SEPARADOR QUE MENCIONASTE */}
+        {/* FOOTER / CIERRE DEFINITIVO */}
+        <footer className="py-16 px-6 text-center border-t border-[#334155] bg-black">
           <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
+          
+          <div className="mb-8">
+            <img
+              src="/IMG-20251216-WA0001.jpg"
+              className="h-12 mx-auto mb-4"
+              alt="Nehuen Fit Logo"
+            />
+            <p className="text-[#9ca3af] text-[18px] font-medium uppercase tracking-wider">
+              Nehuen Fit
+            </p>
+            <p className="text-[#9ca3af] text-[14px] font-medium uppercase opacity-80">
+              Personal Trainer
+            </p>
+          </div>
 
-          {/* TU MARCA Y LOGO (Justo abajo del separador) */}
-<div className="mb-8">
-  <img
-    src="/IMG-20251216-WA0001.jpg"
-    className="h-12 mx-auto mb-4"
-    alt="Nehuen Fit Logo"
-  />
-  <p className="text-[#9ca3af] text-[18px] font-medium uppercase">
-    Nehuen Fit
-  </p>
-  <p className="text-[#9ca3af] text-[18px] font-medium uppercase">
-    Personal Trainer
-  </p>
-</div>
+          <p className="text-[#6b7280] text-[12px]">
+            © {new Date().getFullYear()} Nehuen Fit · Todos los derechos reservados
+          </p>
+        </footer>
 
-{/* TEXTO LEGAL (Al final de todo) */}
-<p className="text-[#6b7280] text-[12px]">
-  © Nehuen Fit · Todos los derechos reservados
-</p>
-
-</footer>
-      </div>
-    );
-  
+      </div> {/* Este cierra el max-w-full */}
+    </div>   {/* Este cierra el min-h-screen */}
+  );
+}

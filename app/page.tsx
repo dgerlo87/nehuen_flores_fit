@@ -309,7 +309,7 @@ export default function Page() {
           <h2 className="text-[#22c55e] text-2xl font-bold mb-8 text-center uppercase italic">
             Armemos tu plan
           </h2>
-          <form action="https://formspree.io/f/tu-id" method="POST" className="flex flex-col gap-5">
+          <form action="https://formspree.io/f/mjkgzypb" method="POST" className="flex flex-col gap-5">
             
             {/* NOMBRE Y EDAD */}
             <input type="text" name="nombre" placeholder="Nombre" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />

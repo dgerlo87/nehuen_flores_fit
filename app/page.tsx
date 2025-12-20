@@ -4,10 +4,23 @@ export default function Page() {
       <div className="max-w-full mx-auto">
         
         {/* HEADER / HERO SECTION */}
-        <header className="relative py-16 px-6 text-center border-b border-[#334155]">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-[#22c55e] text-4xl md:text-6xl font-black mb-4 uppercase italic">
-              Nehuen Flores Fit
+        {/* HEADER CON IMAGEN DE FONDO */}
+<header className="relative py-24 px-6 text-center border-b border-[#334155] overflow-hidden">
+  {/IMG-20251215-WA0059.jpg/}
+  <div 
+    className="absolute inset-0 z-0 opacity-40" // Opacidad para que el texto se lea bien
+    style={{
+      backgroundImage: "url('/IMG-20251215-WA0059.jpg')", // Reemplaza por el nombre real de tu archivo
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}
+  />
+
+  {/* Contenido (Encima de la imagen) */}
+  <div className="relative z-10 max-w-4xl mx-auto">
+    <h1 className="text-[#22c55e] text-4xl md:text-6xl font-black mb-4 uppercase italic">
+      Nehuen Flores Fit
             </h1>
             <p className="text-[#e5e7eb] text-[18px] md:text-[20px] font-medium mt-4 mb-6 max-w-md mx-auto leading-relaxed">
               Completá el formulario y armamos tu rutina según tu objetivo, nivel y disponibilidad.

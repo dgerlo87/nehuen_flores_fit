@@ -274,8 +274,7 @@ export default function Page() {
             © {new Date().getFullYear()} Nehuen Fit · Todos los derechos reservados
           </p>
         </footer>
-
-      </div> {/* Este cierra el max-w-full */}
-    </div>   {/* Este cierra el min-h-screen */}
+      </div>
+    </div>
   );
 }

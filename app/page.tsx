@@ -102,7 +102,8 @@ export default function Page() {
           </div>
         </section>
 
-        <footer className="py-10 text-center text-[#4b5563] text-[10px] uppercase tracking-widest
+        <footer className="py-10 text-center text-[#4b5563] text-[10px] uppercase tracking-widest">
+        </footer>
         © {new Date().getFullYear()} Nehuen Fit
         </footer>
       </div>

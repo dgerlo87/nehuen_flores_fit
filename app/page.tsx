@@ -6,7 +6,7 @@ export default function Page() {
         {/* HEADER / HERO SECTION */}
         {/* HEADER CON IMAGEN DE FONDO */}
 <header className="relative py-24 px-6 text-center border-b border-[#334155] overflow-hidden">
-  {/IMG-20251215-WA0059.jpg/}
+  
   <div 
     className="absolute inset-0 z-0 opacity-40" // Opacidad para que el texto se lea bien
     style={{

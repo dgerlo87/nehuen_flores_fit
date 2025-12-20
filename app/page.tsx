@@ -301,10 +301,9 @@ export default function Page() {
       * Los comentarios serán revisados antes de ser publicados en la web.
     </p>
 
-  </div> {/* Cierre del max-w-2xl de la sección de comentarios */}
+  </div> 
     </section>
 
-    {/* SECCIÓN: FORMULARIO PARA LA RUTINA */}
     <section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">
       <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl">
           <h2 className="text-[#22c55e] text-2xl font-bold mb-8 text-center uppercase italic">

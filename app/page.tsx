@@ -84,7 +84,7 @@ export default function NehuenFitLanding() {
               </a>
                          </div>
           </div>
-        </section>header>
+        >/header>
         
         {/* SECCIÓN VIDEOS */}
         <section className="py-12 px-6 max-w-4xl mx-auto text-center">

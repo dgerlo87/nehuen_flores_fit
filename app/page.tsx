@@ -7,19 +7,29 @@ export default function Page() {
         {/* HEADER CON IMAGEN DE FONDO */}
 <header className="relative py-24 px-6 text-center border-b border-[#334155] overflow-hidden">
   
+  {/* EL LOGO (Margen izquierdo superior) */}
+  <div className="absolute top-6 left-6 z-20">
+    <img 
+      src="/IMG-20251216-WA0001.jpg" 
+      alt="Logo Nehuen Fit" 
+      className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.5)]" 
+    />
+  </div>
+
+  {/* La Imagen de Fondo */}
   <div 
-    className="absolute inset-0 z-0 opacity-40" // Opacidad para que el texto se lea bien
+    className="absolute inset-0 z-0 opacity-40" 
     style={{
-      backgroundImage: "url('/IMG-20251215-WA0059.jpg')", // Reemplaza por el nombre real de tu archivo
+      backgroundImage: "url('/IMG-20251215-WA0059.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
     }}
   />
 
-  {/* Contenido (Encima de la imagen) */}
+  {/* Contenido Central */}
   <div className="relative z-10 max-w-4xl mx-auto">
-    <h1 className="text-[#22c55e] text-4xl md:text-6xl font-black mb-4 uppercase italic">
+    <h1 className="text-[#22c55e] text-4xl md:text-6xl font-black mb-4 uppercase italic drop-shadow-md">
       Nehuen Flores Fit
             </h1>
             <p className="text-[#e5e7eb] text-[18px] md:text-[20px] font-medium mt-4 mb-6 max-w-md mx-auto leading-relaxed">

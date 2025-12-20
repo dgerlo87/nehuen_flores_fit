@@ -224,7 +224,81 @@ export default function Page() {
     </div>
   </div>
 </section>
+
+        {/* SECCIÓN: DEJAR COMENTARIO Y CALIFICACIÓN */}
+<section className="py-20 px-6 bg-black border-t border-[#334155]/30">
+  <div className="max-w-2xl mx-auto">
+    
+    {/* Título de la sección */}
+    <div className="text-center mb-10">
+      <h2 className="text-[#22c55e] text-[26px] md:text-[30px] font-bold uppercase italic">
+        ¿Entrenaste conmigo?
+      </h2>
+      <p className="text-[#9ca3af] text-[15px] md:text-[16px] mt-2">
+        Tu opinión me ayuda a seguir mejorando y motiva a otros a empezar.
+      </p>
+    </div>
+
+    {/* Tarjeta del Formulario */}
+    <div className="bg-[#1e293b]/20 p-8 rounded-3xl border border-[#334155] backdrop-blur-sm shadow-2xl">
+      <form className="space-y-6">
         
+        {/* Selector de Estrellas (Visual) */}
+        <div className="flex flex-col items-center gap-2">
+          <label className="text-xs uppercase tracking-widest text-[#9ca3af] font-bold">
+            Tu Calificación
+          </label>
+          <div className="flex gap-2">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <button 
+                key={star} 
+                type="button" 
+                className="text-3xl text-[#22c55e] hover:scale-125 transition-transform duration-200"
+              >
+                ★
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Campo: Nombre */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-[#e5e7eb] ml-1">Nombre Completo</label>
+          <input 
+            type="text" 
+            placeholder="Ej: Carlos Gómez" 
+            className="w-full bg-black/50 border border-[#334155] p-4 rounded-xl text-white placeholder:text-[#6b7280] outline-none focus:border-[#22c55e] focus:ring-1 focus:ring-[#22c55e] transition-all"
+          />
+        </div>
+
+        {/* Campo: Mensaje */}
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-[#e5e7eb] ml-1">Tu Experiencia</label>
+          <textarea 
+            rows={4} 
+            placeholder="Contanos cómo te sentiste con las rutinas y el acompañamiento..." 
+            className="w-full bg-black/50 border border-[#334155] p-4 rounded-xl text-white placeholder:text-[#6b7280] outline-none focus:border-[#22c55e] focus:ring-1 focus:ring-[#22c55e] transition-all resize-none"
+          ></textarea>
+        </div>
+
+        {/* Botón de envío */}
+        <button 
+          type="button" 
+          className="w-full bg-[#16a34a] text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-[#22c55e] hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] transition-all duration-300"
+        >
+          Enviar mi opinión
+        </button>
+
+      </form>
+    </div>
+
+    {/* Texto aclaratorio pequeño */}
+    <p className="text-center text-[#6b7280] text-[12px] mt-6 italic">
+      * Los comentarios serán revisados antes de ser publicados en la web.
+    </p>
+
+  </div>
+</section>
               {/* SECCIÓN: FORMULARIO */}
       <section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">
         <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl">

@@ -82,8 +82,10 @@ export default function NehuenFitLanding() {
               >
                 QUIERO MI RUTINA
               </a>
-                         </header>
-
+                         </div>
+          </div>
+        </section>header>
+        
         {/* SECCIÓN VIDEOS */}
         <section className="py-12 px-6 max-w-4xl mx-auto text-center">
           <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-black mb-6 uppercase italic">Rutinas en video</h2>

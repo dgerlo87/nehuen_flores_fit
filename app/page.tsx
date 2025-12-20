@@ -290,29 +290,52 @@ export default function Page() {
 
       
 
-        {/* FOOTER / CIERRE DEFINITIVO */}
-        <footer className="py-16 px-6 text-center border-t border-[#334155] bg-black">
-          <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
+              {/* FOOTER */}
+      <footer className="py-16 px-6 bg-[#0f172a] border-t border-[#334155] text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-[#22c55e] text-xl font-bold mb-4 uppercase italic">Empezá hoy</h2>
+          <p className="text-[#9ca3af] text-sm mb-8">Completá el formulario y empezá a entrenar con una rutina pensada para vos.</p>
           
-          <div className="mb-8">
-            <img
-              src="/IMG-20251216-WA0001.jpg"
-              className="h-12 mx-auto mb-4"
-              alt="Nehuen Fit Logo"
-            />
-            <p className="text-[#9ca3af] text-[18px] font-medium uppercase tracking-wider">
-              Nehuen Fit
-            </p>
-            <p className="text-[#9ca3af] text-[14px] font-medium uppercase opacity-80">
-              Personal Trainer
-            </p>
+          <a href="#formulario" className="bg-[#16a34a] px-10 py-4 rounded-xl font-bold text-sm hover:bg-[#22c55e] transition-all uppercase inline-block mb-12 text-white">
+            QUIERO MI RUTINA
+          </a>
+
+          <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
+
+          {/* REDES SOCIALES */}
+          <div className="flex justify-center gap-6 mb-10">
+            <a href="https://instagram.com/TU_USUARIO" target="_blank" rel="noopener noreferrer" className="text-[#9ca3af] hover:text-[#22c55e] transition-all flex flex-col items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <span className="text-[10px] uppercase tracking-widest font-bold">Instagram</span>
+            </a>
+            <a href="https://wa.me/TU_NUMERO" target="_blank" rel="noopener noreferrer" className="text-[#9ca3af] hover:text-[#22c55e] transition-all flex flex-col items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span className="text-[10px] uppercase tracking-widest font-bold">WhatsApp</span>
+            </a>
           </div>
 
-          <p className="text-[#6b7280] text-[12px]">
-            © {new Date().getFullYear()} Nehuen Fit · Todos los derechos reservados
-          </p>
-        </footer>
-      </div>
+          <div className="mb-8">
+            <img src="/IMG-20251216-WA0001.jpg" alt="Logo" className="h-12 mx-auto mb-4 opacity-90" />
+            <p className="text-[#9ca3af] text-lg font-medium uppercase tracking-tight">Nehuen Fit</p>
+            <p className="text-[#9ca3af] text-lg font-medium uppercase tracking-tight">Personal Trainer</p>
+          </div>
+
+          <p className="text-[#6b7280] text-xs">© Nehuen Fit · Todos los derechos reservados</p>
+        </div>
+      </footer>
+
+      {/* BOTÓN FLOTANTE WHATSAPP (Aparece en la esquina inferior derecha) */}
+      <a 
+        href="https://wa.me/TU_NUMERO" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center"
+        aria-label="Contactar por WhatsApp"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+
     </div>
   );
 }
+

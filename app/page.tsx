@@ -249,23 +249,39 @@ export default function Page() {
       </a>
     </div>
 
-    {/* SEPARADOR SUTIL */}
-    <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
+        
 
-    {/* TEXTO LEGAL */}
-    <p className="text-[#6b7280] text-[12px] md:text-[13px] font-medium tracking-tight">
-      © {new Date().getFullYear()} Nehuen Fit · Todos los derechos reservados
-    </p>
-    
-  </div>
-    </footer>
-      </div>
-    </div>
+        {/* 1. FORMULARIO (Aquí es donde la gente completa sus datos) */}
+        <section id="formulario" className="py-20 px-6 bg-[#0f172a]">
+           {/* ... código del formulario con los campos Nombre, Objetivo, etc. ... */}
+        </section>
+
+        {/* 2. FOOTER (El cierre definitivo de la web) */}
+        <footer className="py-16 px-6 text-center border-t border-[#334155]">
+          
+          {/* Título y Botón final */}
+          <h2 className="text-[#22c55e] text-[20px] font-bold uppercase italic">Empezá hoy</h2>
+          {/* ... botón ... */}
+
+          {/* EL SEPARADOR QUE MENCIONASTE */}
+          <div className="w-12 h-px bg-[#334155] mx-auto mb-8"></div>
+
+          {/* TU MARCA Y LOGO (Justo abajo del separador) */}
+          <div className="mb-8">
+            <img src="/IMG-20251216-WA0001.jpg" className="h-12 mx-auto mb-4" />
+            <p className="text-[#9ca3af] text-[18px] font-medium uppercase">Nehuen Fit</p>
+            <p className="text-[#9ca3af] text-[18px] font-medium uppercase">Personal Trainer</p>
+          </div>
+
+          {/* TEXTO LEGAL (Al final de todo) */}
+          <p className="text-[#6b7280] text-[12px]">
+            © Nehuen Fit · Todos los derechos reservados
+          </p>
+
+        </footer>
+
+      </div> {/* Cierra el max-w */}
+    </div>   {/* Cierra el min-h-screen */}
   );
-}
-
+        }
         
-
-        
-
-                

@@ -293,7 +293,7 @@ export default function Page() {
                 </button>
               </form>
             </div>
-          </div>
+          
         </section>
 
     {/* Texto aclaratorio pequeño */}

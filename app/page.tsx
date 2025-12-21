@@ -240,7 +240,7 @@
 
             <div className="bg-[#1e293b]/20 p-8 rounded-3xl border border-[#334155] backdrop-blur-sm shadow-2xl">
               <form 
-                action="https://formspree.io/f/mjkgzypb" 
+                action="https://formspree.io/f/mpwvvveb" 
                 method="POST" 
                 className="space-y-6"
               >
@@ -305,7 +305,7 @@
         <h2 className="text-[#22c55e] text-2xl font-bold mb-8 text-center uppercase italic">
           Armemos tu plan
         </h2>
-          <form action="https://formspree.io/f/mjkgzypb" method="POST" className="flex flex-col gap-5">
+          <form action="https://formspree.io/f/mpwvvveb" method="POST" className="flex flex-col gap-5">
             
             {/* NOMBRE Y EDAD */}
             <input type="text" name="nombre" placeholder="Nombre" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />

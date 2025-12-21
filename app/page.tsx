@@ -1,4 +1,4 @@
-export default function Page() {
+  export default function Page() {
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="max-w-full mx-auto">
@@ -296,7 +296,7 @@ export default function Page() {
         <p className="text-center text-[#6b7280] text-[12px] mt-6 italic">
           * Los comentarios serán revisados antes de ser publicados en la web.
         </p>
-      </div> 
+      </div>
     </section>
 
     <section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">

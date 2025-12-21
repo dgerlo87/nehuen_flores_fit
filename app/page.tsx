@@ -400,7 +400,7 @@
 
       {/* BOTÓN FLOTANTE WHATSAPP */}
       <a 
-        href="https://wa.me/549117145711" 
+        href="https://wa.me/5491172145711" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center"

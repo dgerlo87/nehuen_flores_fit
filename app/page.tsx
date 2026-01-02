@@ -338,67 +338,81 @@ export default function Page() {
             </p>
           </div> {/* <-- Este cierra el max-w-2xl */}
         </section>
+        
 <section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">
-      <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl">
-        <h2 className="text-[#22c55e] text-2xl font-bold mb-8 text-center uppercase italic">
-          Armemos tu plan
-        </h2>
-          <form action="https://formspree.io/f/mpwvvveb" method="POST" className="flex flex-col gap-5">
-            
-            {/* NOMBRE Y EDAD */}
-            <input type="text" name="nombre" placeholder="Nombre" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-            <input type="number" name="edad" placeholder="Edad" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-            
-            {/* OBJETIVO */}
-            <select name="objetivo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
-              <option value="">Seleccioná tu objetivo</option>
-              <option value="Bajar de peso">Bajar de peso</option>
-              <option value="Ganar fuerza">Ganar fuerza</option>
-              <option value="Mejorar condición física">Mejorar condición física</option>
-              <option value="Mantenerme activo/a">Mantenerme activo/a</option>
-            </select>
+  <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl relative overflow-hidden">
+    
+    {/* Barra de Progreso */}
+    <div className="w-full bg-[#334155] h-1.5 mb-8 rounded-full">
+      <div 
+        className="bg-[#22c55e] h-full transition-all duration-500" 
+        style={{ width: `${(paso / 3) * 100}%` }}
+      ></div>
+    </div>
 
-            {/* NIVEL */}
-            <select name="nivel" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
-              <option value="">Nivel de entrenamiento</option>
-              <option value="Principiante">Principiante</option>
-              <option value="Intermedio">Intermedio</option>
-              <option value="Avanzado">Avanzado</option>
-            </select>
+    <h2 className="text-[#22c55e] text-2xl font-bold mb-8 text-center uppercase italic">
+      {paso === 1 && "Contanos sobre vos"}
+      {paso === 2 && "Tu objetivo"}
+      {paso === 3 && "Últimos detalles"}
+    </h2>
 
-            {/* DÍAS Y TIEMPO (En dos columnas) */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1">
-                <label className="text-[#9ca3af] text-xs ml-1 uppercase">Días por semana</label>
-                <select name="dias" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none text-white focus:border-[#22c55e]" required>
-                  <option value="2">2 días</option>
-                  <option value="3">3 días</option>
-                  <option value="4">4 días</option>
-                  <option value="5">5 días</option>
-                </select>
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-[#9ca3af] text-xs ml-1 uppercase">Tiempo por sesión</label>
-                <select name="tiempo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none text-white focus:border-[#22c55e]" required>
-                  <option value="20-30 min">20–30 min</option>
-                  <option value="30-45 min">30–45 min</option>
-                  <option value="45-60 min">45–60 min</option>
-                </select>
-              </div>
-            </div>
-
-            {/* LESIONES */}
-            <textarea name="lesion" placeholder="¿Tenés alguna lesión o molestia? (Opcional)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
-            
-            {/* CONTACTO */}
-            <input type="text" name="contacto" placeholder="Email o WhatsApp" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-            
-            <button type="submit" className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] transition-all text-white shadow-lg mt-2">
-              Enviar y solicitar rutina
-            </button>
-          </form>
+    <form action="https://formspree.io/f/mpwvvveb" method="POST" className="flex flex-col gap-5">
+      
+      {/* PASO 1: DATOS BÁSICOS */}
+      {paso === 1 && (
+        <div className="flex flex-col gap-5">
+          <input type="text" name="nombre" placeholder="Nombre completo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+          <input type="number" name="edad" placeholder="Edad" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+          <button type="button" onClick={siguientePaso} className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white transition-all">
+            Siguiente
+          </button>
         </div>
-      </section>
+      )}
+
+      {/* PASO 2: OBJETIVOS */}
+      {paso === 2 && (
+        <div className="flex flex-col gap-5">
+          <select name="objetivo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
+            <option value="">🎯 Seleccioná tu objetivo</option>
+            <option value="Bajar de peso">🔥 Bajar de peso</option>
+            <option value="Ganar fuerza">💪 Ganar fuerza</option>
+            <option value="Mejorar condición física">⚡ Mejorar condición física</option>
+          </select>
+          <select name="nivel" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
+            <option value="">Nivel de entrenamiento</option>
+            <option value="Principiante">Principiante</option>
+            <option value="Intermedio">Intermedio</option>
+            <option value="Avanzado">Avanzado</option>
+          </select>
+          <div className="grid grid-cols-2 gap-4">
+            <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
+              Volver
+            </button>
+            <button type="button" onClick={siguientePaso} className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white">
+              Siguiente
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* PASO 3: CONTACTO */}
+      {paso === 3 && (
+        <div className="flex flex-col gap-5">
+          <textarea name="lesion" placeholder="¿Tenés alguna lesión o molestia? (Opcional)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
+          <input type="text" name="contacto" placeholder="WhatsApp o Email" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+          <div className="grid grid-cols-2 gap-4">
+            <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
+              Volver
+            </button>
+            <button type="submit" className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white shadow-lg">
+              Enviar solicitud
+            </button>
+          </div>
+        </div>
+      )}
+    </form>
+  </div>
+</section>
 
       
 

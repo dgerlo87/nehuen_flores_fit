@@ -50,9 +50,9 @@ export default function Page() {
 
 <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center border-b border-[#334155] overflow-hidden">
   
-  {/* IMAGEN DE FONDO */}
-  <div className="absolute inset-0 z-0 opacity-30" style={{
-      backgroundImage: "url('/IMG-20251215-WA0059.jpg')",
+ {/* IMAGEN DE FONDO */}
+ <div className="absolute inset-0 z-0 opacity-30" style={{
+      backgroundImage: "url('/hero-abs.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -176,6 +176,12 @@ export default function Page() {
       Entrená con confianza
     </h2>
 
+<img 
+  src="/coach-nehuen.jpg" 
+  alt="Coach Nehuen" 
+  className="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto mb-8 object-cover border-4 border-[#22c55e] shadow-2xl shadow-green-500/20" 
+/>
+   
     {/* TEXTO PRINCIPAL */}
     <div className="space-y-6 mb-8 text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
       <p>
@@ -210,7 +216,13 @@ export default function Page() {
     <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-10 uppercase italic">
       Mi enfoque: Disciplina sobre Motivación
     </h2>
-    
+
+<img 
+  src="/entrenamiento-intensidad.jpg" 
+  alt="Entrenamiento de Intensidad" 
+  className="w-full max-w-2xl mx-auto rounded-3xl mb-12 opacity-80 border border-white/10 shadow-2xl" 
+/>
+   
     <div className="grid md:grid-cols-3 gap-8 mb-16">
       <div className="bg-[#1e293b]/20 p-6 rounded-2xl border border-[#334155]/50">
         <h3 className="text-white font-bold mb-3">Entrenamiento Puro</h3>
@@ -500,7 +512,13 @@ export default function Page() {
       
 
                     {/* FOOTER */}
-      <footer className="py-16 px-6 bg-[#0f172a] border-t border-[#334155] text-center">
+      <footer className="relative py-16 px-6 bg-[#0f172a] border-t border-[#334155] text-center overflow-hidden">
+  <img 
+    src="/entrenamiento-cierre.jfif" 
+    alt="Fondo Cierre" 
+    className="absolute inset-0 w-full h-full object-cover opacity-10 grayscale" 
+  />
+  <div className="relative z-10 max-w-2xl mx-auto">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-[#22c55e] text-xl font-bold mb-4 uppercase italic">Empezá hoy</h2>
           <p className="text-[#9ca3af] text-sm mb-8">Completá el formulario y empezá a entrenar con una rutina pensada para vos.</p>
@@ -531,6 +549,7 @@ export default function Page() {
 
           <p className="text-[#6b7280] text-xs">© Nehuen Fit · Todos los derechos reservados</p>
         </div>
+   </div>
       </footer>
 
       {/* BOTÓN FLOTANTE WHATSAPP */}

@@ -1,4 +1,11 @@
-  export default function Page() {
+  "use client";
+import { useState } from 'react';
+
+export default function Page() {
+  const [paso, setPaso] = useState(1);
+  const siguientePaso = () => setPaso(paso + 1);
+  const anteriorPaso = () => setPaso(paso - 1);
+
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="max-w-full mx-auto">

@@ -1,20 +1,13 @@
-  "use client";
+ "use client";
 import { useState } from 'react';
-import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 export default function Page() {
   const [paso, setPaso] = useState(1);
   const siguientePaso = () => setPaso(paso + 1);
   const anteriorPaso = () => setPaso(paso - 1);
 
-  const lanzarConfetti = () => {
-    confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.7 },
-      colors: ['#22c55e', '#ffffff', '#16a34a'] 
-    });
-  };
+  return (
+    <div className="min-h-screen bg-black text-white">
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -406,20 +399,29 @@ export default function Page() {
       )}
 
       {/* PASO 3: CONTACTO */}
-      {paso === 3 && (
-        <div className="flex flex-col gap-5">
-          <textarea name="lesion" placeholder="¿Tenés alguna lesión o molestia? (Opcional)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
-          <input type="text" name="contacto" placeholder="WhatsApp o Email" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-          <div className="grid grid-cols-2 gap-4">
-            <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
-              Volver
-            </button>
-            <button type="submit" className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white shadow-lg">
-              Enviar solicitud
-            </button>
-          </div>
-        </div>
-      )}
+{paso === 3 && (
+  <div className="flex flex-col gap-5">
+    <textarea name="lesion" placeholder="¿Tenés alguna lesión o molestia? (Opcional)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
+    <input type="text" name="contacto" placeholder="WhatsApp o Email" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+    
+    <div className="grid grid-cols-2 gap-4">
+      <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
+        Volver
+      </button>
+
+      {/* --- ESTE ES EL BOTÓN NUEVO --- */}
+      <button 
+        type="submit" 
+        className="bg-[#22c55e] py-4 rounded-xl font-bold uppercase text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a] transition-all active:scale-95 animate-bounce-short"
+      >
+        ¡Enviar solicitud!
+      </button>
+      {/* ------------------------------ */}
+      
+    </div>
+  </div>
+)}
+      
     </form>
   </div>
 </section>

@@ -167,30 +167,41 @@ export default function Page() {
 
 </section>
 
-        {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
+       {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
 <section className="py-20 px-6 bg-[#1e293b]/20 border-t border-[#334155]">
-  <div className="max-w-3xl mx-auto text-center">
+  <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     
-    {/* TÍTULO */}
-    <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-8 uppercase italic">
-      Entrená con confianza
-    </h2>
+    {/* COLUMNA 1: TU FOTO */}
+    <div className="flex justify-center order-2 md:order-1">
+      <img 
+        src="/coach-nehuen.jpg" 
+        alt="Coach Nehuen" 
+        className="w-full max-w-[320px] aspect-[4/5] object-cover rounded-3xl border-2 border-[#22c55e]/30 shadow-[0_0_30px_rgba(34,197,94,0.15)]"
+      />
+    </div>
 
-   
-    {/* TEXTO PRINCIPAL */}
-    <div className="space-y-6 mb-8 text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
-      <p>
-        Soy <span className="text-white font-bold">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar de forma segura, progresiva y adaptada a tu nivel, sin presiones y con un plan claro.
-      </p>
-      <p>
-        Trabajo con rutinas simples y efectivas para que puedas sostener el entrenamiento en el tiempo y ver resultados reales.
+    {/* COLUMNA 2: TU TEXTO */}
+    <div className="text-center md:text-left order-1 md:order-2">
+      <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-8 uppercase italic">
+        Entrená con confianza
+      </h2>
+
+      <div className="space-y-6 mb-8 text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
+        <p>
+          Soy <span className="text-white font-bold">Nehuen</span>, personal trainer, y mi objetivo es ayudarte a entrenar de forma segura, progresiva y adaptada a tu nivel, sin presiones y con un plan claro.
+        </p>
+        <p>
+          Trabajo con rutinas simples y efectivas para que puedas sostener el entrenamiento en el tiempo y ver resultados reales.
+        </p>
+      </div>
+
+      <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic">
+        "No se trata de entrenar más, sino de entrenar mejor."
       </p>
     </div>
 
-    {/* FRASE SECUNDARIA */}
-    <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic mb-10">
-      "No se trata de entrenar más, sino de entrenar mejor."
-    </p>
+  </div>
+</section>
 
     {/* BOTÓN (LLAMADO A LA ACCIÓN REPETIDO) */}
     <div className="flex flex-col items-center">

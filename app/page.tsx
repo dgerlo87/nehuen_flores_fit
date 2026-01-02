@@ -184,6 +184,37 @@
 
   </div>
 </section>
+
+        {/* SECCIÓN: FILOSOFÍA Y FUTURO (AGREGADO) */}
+<section className="py-20 px-6 bg-black border-t border-[#334155]/20">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-10 uppercase italic">
+      Mi enfoque: Disciplina sobre Motivación
+    </h2>
+    
+    <div className="grid md:grid-cols-3 gap-8 mb-16">
+      <div className="bg-[#1e293b]/20 p-6 rounded-2xl border border-[#334155]/50">
+        <h3 className="text-white font-bold mb-3">Entrenamiento Puro</h3>
+        <p className="text-[#9ca3af] text-sm">Planes centrados en la técnica y la progresión constante, sin vueltas.</p>
+      </div>
+      <div className="bg-[#1e293b]/20 p-6 rounded-2xl border border-[#334155]/50">
+        <h3 className="text-white font-bold mb-3">Hábitos Reales</h3>
+        <p className="text-[#9ca3af] text-sm">Te ayudo a que el entrenamiento sea parte de tu vida, no una carga.</p>
+      </div>
+      <div className="bg-[#1e293b]/20 p-6 rounded-2xl border border-[#334155]/50">
+        <h3 className="text-white font-bold mb-3">Evolución Continua</h3>
+        <p className="text-[#9ca3af] text-sm">Proyecto en crecimiento para darte siempre las mejores herramientas.</p>
+      </div>
+    </div>
+
+    {/* ACLARACIÓN SOBRE NUTRICIÓN */}
+    <div className="bg-[#22c55e]/5 border border-[#22c55e]/20 p-8 rounded-3xl inline-block max-w-2xl">
+      <p className="text-[#e5e7eb] text-md md:text-lg italic">
+        "Actualmente me encuentro profundizando mis estudios en <strong>Nutrición Deportiva</strong> para que pronto, además de tus rutinas, pueda ofrecerte un plan de alimentación integral que potencie tus resultados al máximo."
+      </p>
+    </div>
+  </div>
+</section>
         
 {/* SECCIÓN: TESTIMONIOS */}
 <section className="py-20 px-6 bg-black">

@@ -167,10 +167,11 @@ export default function Page() {
 
 </section>
 
-      {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
+     {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
 <section className="py-20 px-6 bg-[#1e293b]/20 border-t border-[#334155]">
   <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     
+    {/* COLUMNA 1: TU FOTO */}
     <div className="flex justify-center order-2 md:order-1">
       <img 
         src="/coach-nehuen.jpg" 
@@ -179,6 +180,7 @@ export default function Page() {
       />
     </div>
 
+    {/* COLUMNA 2: TU TEXTO + BOTÓN */}
     <div className="text-center md:text-left order-1 md:order-2">
       <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-8 uppercase italic">
         Entrená con confianza
@@ -193,22 +195,21 @@ export default function Page() {
         </p>
       </div>
 
-      <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic">
+      <p className="text-[#9ca3af] text-[14px] md:text-[15px] italic mb-10">
         "No se trata de entrenar más, sino de entrenar mejor."
       </p>
-    </div>
 
-  </div>
-</section>
-
-    {/* BOTÓN (LLAMADO A LA ACCIÓN REPETIDO) */}
-    <div className="flex flex-col items-center">
-      <a 
-        href="#formulario" 
-        className="bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-xl font-bold text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all shadow-xl uppercase tracking-wide"
-      >
-        QUIERO MI RUTINA
-      </a>
+      {/* BOTÓN DENTRO DE LA COLUMNA */}
+      <div className="flex justify-center md:justify-start">
+        <a 
+          href="https://wa.me/5491100000000" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-xl font-bold text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all shadow-xl uppercase tracking-wide inline-block"
+        >
+          QUIERO MI RUTINA
+        </a>
+      </div>
     </div>
 
   </div>

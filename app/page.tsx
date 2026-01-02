@@ -43,17 +43,15 @@ export default function Page() {
     </a>
   </nav>
 </header>
-       </div>
+       
        
         {/* HEADER / HERO SECTION */}
-        {/* HEADER CON IMAGEN DE FONDO */}
+{/* HEADER CON IMAGEN DE FONDO */}
 
 <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center border-b border-[#334155] overflow-hidden">
   
   {/* IMAGEN DE FONDO */}
-  <div 
-    className="absolute inset-0 z-0 opacity-30" 
-    style={{
+  <div className="absolute inset-0 z-0 opacity-30" style={{
       backgroundImage: "url('/IMG-20251215-WA0059.jpg')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
@@ -61,7 +59,8 @@ export default function Page() {
     }}
   />
 
-
+<div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+     
     {/* TÍTULO PRINCIPAL */}
     <h1 className="text-[#22c55e] text-[28px] md:text-[48px] leading-tight font-bold mb-6 max-w-3xl">
       Entrenamientos simples, efectivos y adaptados a vos

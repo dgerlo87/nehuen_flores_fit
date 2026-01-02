@@ -8,9 +8,6 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-
-  return (
-    <div className="min-h-screen bg-black text-white">
       <div className="max-w-full mx-auto">
         
         {/* HEADER / HERO SECTION */}
@@ -401,10 +398,8 @@ export default function Page() {
           </div>
         )}
       </form>
-    </main>
-  </div>
-  );
-}
+    </div>
+  </section>
 
       
 

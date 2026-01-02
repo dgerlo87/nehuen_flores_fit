@@ -8,8 +8,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-black text-white scroll-smooth">
-      <div className="max-w-full mx-auto">
-
+      
 <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
   <nav className="max-w-6xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
     
@@ -42,14 +41,14 @@ export default function Page() {
     <a href="#formulario" className="bg-[#22c55e] text-black px-4 py-2 rounded-full font-bold text-xs md:text-sm hover:bg-[#1da850] transition-transform active:scale-95 shadow-lg shadow-green-500/20">
       EMPEZAR AHORA
     </a>
-
   </nav>
 </header>
+       </div>
        
         {/* HEADER / HERO SECTION */}
         {/* HEADER CON IMAGEN DE FONDO */}
 
-<header className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center border-b border-[#334155] overflow-hidden">
+<section className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center border-b border-[#334155] overflow-hidden">
   
   {/* IMAGEN DE FONDO */}
   <div 
@@ -88,7 +87,7 @@ export default function Page() {
     </div>
 
   </div>
-</header>
+</section>
 
         {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
 <section id="beneficios" className="py-16 px-6 bg-[#0f172a]/50 scroll-mt-20">

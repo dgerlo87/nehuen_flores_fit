@@ -215,7 +215,7 @@ export default function Page() {
 <img 
   src="/entrenamiento-intensidad.jpg" 
   alt="Mi Enfoque" 
-  className="w-full max-w-lg mx-auto rounded-2xl mb-12 opacity-90 border border-white/10 shadow-xl" 
+  className="w-full max-w-2xl mx-auto h-[180px] md:h-[250px] object-cover object-[center_35%] rounded-3xl mb-12 opacity-80 border border-white/10 shadow-2xl" 
 />
    
     <div className="grid md:grid-cols-3 gap-8 mb-16">

@@ -7,13 +7,32 @@ export default function Page() {
   const anteriorPaso = () => setPaso(paso - 1);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white scroll-smooth">
       <div className="max-w-full mx-auto">
-        
+
+<header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#334155]/20">
+  <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    {/* Tu Logo */}
+    <div className="text-[#22c55e] font-black text-xl tracking-tighter">
+      NEHUEN<span className="text-white">FIT</span>
+    </div>
+
+    {/* Menú de Navegación - Solo visible en Desktop, oculto en móviles para no molestar */}
+    <div className="hidden md:flex items-center gap-8">
+      <a href="#beneficios" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">Beneficios</a>
+      <a href="#testimonios" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">Testimonios</a>
+      <a href="#faq" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">FAQ</a>
+      <a href="#formulario" className="bg-[#22c55e] text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-[#16a34a] transition-all">
+        EMPEZAR AHORA
+      </a>
+    </div>
+  </nav>
+</header>
+       
         {/* HEADER / HERO SECTION */}
         {/* HEADER CON IMAGEN DE FONDO */}
 
-<header className="relative py-20 md:py-28 px-6 text-center border-b border-[#334155] overflow-hidden">
+<header className="relative pt-32 pb-20 md:pt-40 md:pb-28 px-6 text-center border-b border-[#334155] overflow-hidden">
   
   {/* IMAGEN DE FONDO */}
   <div 
@@ -76,7 +95,7 @@ export default function Page() {
 </header>
 
         {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
-<section className="py-16 px-6 bg-[#0f172a]/50">
+<section id="beneficios" className="py-16 px-6 bg-[#0f172a]/50 scroll-mt-20">
   <div className="max-w-4xl mx-auto text-center">
     
     {/* TÍTULO */}
@@ -224,7 +243,7 @@ export default function Page() {
 </section>
         
 {/* SECCIÓN: TESTIMONIOS */}
-<section className="py-20 px-6 bg-black">
+<section id="testimonios" className="py-20 px-6 bg-black scroll-mt-20">
   <div className="max-w-4xl mx-auto">
     
     {/* TÍTULO */}
@@ -340,7 +359,7 @@ export default function Page() {
         </section>
        
 {/* SECCIÓN: PREGUNTAS FRECUENTES (FAQ) */}
-<section className="py-20 px-6 bg-black border-t border-[#334155]/20">
+<section id="faq" className="py-20 px-6 bg-black border-t border-[#334155]/20 scroll-mt-20">
   <div className="max-w-3xl mx-auto">
     <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-12 text-center uppercase italic">
       Preguntas Frecuentes
@@ -378,7 +397,7 @@ export default function Page() {
   </div>
 </section>
        
-<section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">
+<section id="formulario" className="py-20 px-6 bg-[#0f172a]/30 scroll-mt-20">
   <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl relative overflow-hidden">
     
     {/* Barra de Progreso */}

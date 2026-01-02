@@ -74,23 +74,22 @@ export default function Page() {
 
     {/* BOTÓN PRINCIPAL Y TEXTO CHICO */}
     <div className="flex flex-col items-center gap-4">
-      <a 
-        href="#formulario" 
-        className="bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-xl font-bold text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all shadow-xl uppercase tracking-wide"
-      >
-        QUIERO MI RUTINA
-      </a>
-      
-      <p className="text-[#9ca3af] text-[14px] md:text-[15px] font-medium flex items-center gap-2">
-        ⏱️ Te lleva menos de 1 minuto
-      </p>
-    </div>
+            <a 
+              href="#formulario" 
+              className="bg-[#16a34a] text-[#ffffff] px-10 py-4 rounded-xl font-bold text-[16px] md:text-[18px] hover:bg-[#22c55e] transition-all shadow-xl uppercase tracking-wide"
+            >
+              QUIERO MI RUTINA
+            </a>
+            
+            <p className="text-[#9ca3af] text-[14px] md:text-[15px] font-medium flex items-center gap-2">
+              ⏱️ Te lleva menos de 1 minuto
+            </p>
+          </div>
+        </div>
+      </section>
 
-  </div>
-</section>
-
-        {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
-<section id="beneficios" className="py-16 px-6 bg-[#0f172a]/50 scroll-mt-20">
+      {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
+      <section id="beneficios" className="py-16 px-6 bg-[#0f172a]/50 scroll-mt-20">
   <div className="max-w-4xl mx-auto text-center">
     
     {/* TÍTULO */}

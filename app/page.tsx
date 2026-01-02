@@ -84,6 +84,7 @@ export default function Page() {
               ⏱️ Te lleva menos de 1 minuto
             </p>
           </div>
+        </div> {/* <--- AGREGA ESTA LÍNEA AQUÍ */}
       </section>
 
       {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}

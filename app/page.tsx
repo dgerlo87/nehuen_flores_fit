@@ -176,11 +176,6 @@ export default function Page() {
       Entrená con confianza
     </h2>
 
-<img 
-  src="/entrenamiento-intensidad.jpg" 
-  alt="Mi Enfoque" 
-  className="w-[90%] max-w-[500px] mx-auto rounded-2xl mb-12 opacity-90 border border-white/10 shadow-2xl block" 
-/>
    
     {/* TEXTO PRINCIPAL */}
     <div className="space-y-6 mb-8 text-[#e5e7eb] text-[16px] md:text-[18px] leading-relaxed">
@@ -220,7 +215,7 @@ export default function Page() {
 <img 
   src="/entrenamiento-intensidad.jpg" 
   alt="Mi Enfoque" 
-  className="w-full max-w-xl mx-auto h-48 md:h-64 object-cover rounded-2xl mb-12 opacity-80 border border-white/10 shadow-xl" 
+  className="w-full max-w-lg mx-auto rounded-2xl mb-12 opacity-90 border border-white/10 shadow-xl" 
 />
    
     <div className="grid md:grid-cols-3 gap-8 mb-16">

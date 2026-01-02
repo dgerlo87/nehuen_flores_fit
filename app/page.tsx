@@ -1,10 +1,20 @@
   "use client";
 import { useState } from 'react';
+import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 
 export default function Page() {
   const [paso, setPaso] = useState(1);
   const siguientePaso = () => setPaso(paso + 1);
   const anteriorPaso = () => setPaso(paso - 1);
+
+  const lanzarConfetti = () => {
+    confetti({
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.7 },
+      colors: ['#22c55e', '#ffffff', '#16a34a'] 
+    });
+  };
 
   return (
     <div className="min-h-screen bg-black text-white">

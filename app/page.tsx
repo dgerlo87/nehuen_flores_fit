@@ -359,68 +359,50 @@ export default function Page() {
       {paso === 3 && "Últimos detalles"}
     </h2>
 
-    <form action="https://formspree.io/f/mpwvvveb" method="POST" className="flex flex-col gap-5">
-      
-      {/* PASO 1: DATOS BÁSICOS */}
-      {paso === 1 && (
-        <div className="flex flex-col gap-5">
-          <input type="text" name="nombre" placeholder="Nombre completo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-          <input type="number" name="edad" placeholder="Edad" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-          <button type="button" onClick={siguientePaso} className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white transition-all">
-            Siguiente
-          </button>
-        </div>
-      )}
-
-      {/* PASO 2: OBJETIVOS */}
-      {paso === 2 && (
-        <div className="flex flex-col gap-5">
-          <select name="objetivo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
-            <option value="">🎯 Seleccioná tu objetivo</option>
-            <option value="Bajar de peso">🔥 Bajar de peso</option>
-            <option value="Ganar fuerza">💪 Ganar fuerza</option>
-            <option value="Mejorar condición física">⚡ Mejorar condición física</option>
-          </select>
-          <select name="nivel" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required>
-            <option value="">Nivel de entrenamiento</option>
-            <option value="Principiante">Principiante</option>
-            <option value="Intermedio">Intermedio</option>
-            <option value="Avanzado">Avanzado</option>
-          </select>
-          <div className="grid grid-cols-2 gap-4">
-            <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
-              Volver
-            </button>
-            <button type="button" onClick={siguientePaso} className="bg-[#16a34a] py-4 rounded-xl font-bold uppercase hover:bg-[#22c55e] text-white">
-              Siguiente
-            </button>
+   <form action="https://formspree.io/f/mpwvvveb" method="POST" className="bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] backdrop-blur-sm shadow-2xl flex flex-col gap-5">
+        
+        {/* PASO 1: DATOS BÁSICOS */}
+        {paso === 1 && (
+          <div className="flex flex-col gap-5">
+            <input type="text" name="nombre" placeholder="Nombre completo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+            <div className="grid grid-cols-2 gap-4">
+              <input type="number" name="edad" placeholder="Edad" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+              <input type="text" name="peso" placeholder="Peso (kg)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+            </div>
+            <button type="button" onClick={siguientePaso} className="bg-[#22c55e] py-4 rounded-xl font-bold uppercase hover:bg-[#16a34a] transition-all">Siguiente</button>
           </div>
-        </div>
-      )}
+        )}
 
-     {/* PASO 3: CONTACTO */}
-      {paso === 3 && (
-        <div className="flex flex-col gap-5">
-          <textarea name="lesion" placeholder="¿Tenés alguna lesión o molestia? (Opcional)" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
-          <input type="text" name="contacto" placeholder="WhatsApp o Email" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
-          
-          <div className="grid grid-cols-2 gap-4">
-            <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">
-              Volver
-            </button>
-            <button type="submit" className="bg-[#22c55e] py-4 rounded-xl font-bold uppercase text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:bg-[#16a34a] transition-all active:scale-95">
-              ¡Enviar solicitud!
-            </button>
+        {/* PASO 2: OBJETIVOS */}
+        {paso === 2 && (
+          <div className="flex flex-col gap-5">
+            <select name="objetivo" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white appearance-none" required>
+              <option value="">¿Cuál es tu objetivo?</option>
+              <option value="perder">Perder Grasa</option>
+              <option value="ganar">Ganar Músculo</option>
+              <option value="salud">Salud y Bienestar</option>
+            </select>
+            <div className="grid grid-cols-2 gap-4">
+              <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">Volver</button>
+              <button type="button" onClick={siguientePaso} className="bg-[#22c55e] py-4 rounded-xl font-bold uppercase hover:bg-[#16a34a] transition-all">Siguiente</button>
+            </div>
           </div>
-        </div>
-      )}
-    </form>
+        )}
+
+        {/* PASO 3: CONTACTO */}
+        {paso === 3 && (
+          <div className="flex flex-col gap-5">
+            <textarea name="lesion" placeholder="¿Tenés alguna lesión?" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
+            <input type="text" name="contacto" placeholder="WhatsApp o Email" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white" required />
+            <div className="grid grid-cols-2 gap-4">
+              <button type="button" onClick={anteriorPaso} className="border border-[#334155] py-4 rounded-xl font-bold uppercase text-[#9ca3af]">Volver</button>
+              <button type="submit" className="bg-[#22c55e] py-4 rounded-xl font-bold uppercase text-white shadow-[0_0_20px_rgba(34,197,94,0.4)] active:scale-95">¡Enviar solicitud!</button>
+            </div>
+          </div>
+        )}
+      </form>
+    </main>
   </div>
-</section>
-
-{/* ESTOS SON LOS CIERRES FINALES QUE FALTABAN */}
-      </main>
-    </div>
   );
 }
 

@@ -338,7 +338,46 @@ export default function Page() {
             </p>
           </div> {/* <-- Este cierra el max-w-2xl */}
         </section>
-        
+       
+{/* SECCIÓN: PREGUNTAS FRECUENTES (FAQ) */}
+<section className="py-20 px-6 bg-black border-t border-[#334155]/20">
+  <div className="max-w-3xl mx-auto">
+    <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-12 text-center uppercase italic">
+      Preguntas Frecuentes
+    </h2>
+
+    <div className="space-y-6">
+      {[
+        {
+          q: "¿Necesito experiencia previa para arrancar?",
+          a: "Para nada. El plan se adapta a tu nivel actual, ya sea que estés empezando de cero o que ya lleves tiempo entrenando."
+        },
+        {
+          q: "¿Puedo entrenar en casa o necesito ir a un gimnasio?",
+          a: "Donde vos prefieras. Armo la rutina en base al equipamiento que tengas disponible, ya sea un gimnasio completo o solo un par de mancuernas en casa."
+        },
+        {
+          q: "¿En cuánto tiempo recibo mi rutina?",
+          a: "Una vez que completás el formulario y nos ponemos en contacto, recibís tu plan personalizado en un plazo de 24 a 48 horas hábiles."
+        },
+        {
+          q: "¿Cómo es el seguimiento?",
+          a: "Vamos a estar en contacto vía WhatsApp para resolver dudas, corregir técnica mediante videos y ajustar el plan según tu evolución."
+        }
+      ].map((faq, index) => (
+        <div key={index} className="bg-[#1e293b]/20 p-6 rounded-2xl border border-[#334155]/50 hover:border-[#22c55e]/50 transition-colors">
+          <h3 className="text-white font-bold mb-2 flex items-center gap-3">
+            <span className="text-[#22c55e]">?</span> {faq.q}
+          </h3>
+          <p className="text-[#9ca3af] text-sm md:text-base leading-relaxed">
+            {faq.a}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+       
 <section id="formulario" className="py-20 px-6 bg-[#0f172a] scroll-mt-10">
   <div className="max-w-xl mx-auto bg-[#1e293b]/50 p-8 rounded-3xl border border-[#334155] shadow-2xl relative overflow-hidden">
     

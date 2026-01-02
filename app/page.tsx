@@ -177,9 +177,9 @@ export default function Page() {
     </h2>
 
 <img 
-  src="/coach-nehuen.jpg" 
-  alt="Coach Nehuen" 
-  className="w-48 h-48 md:w-64 md:h-64 rounded-full mx-auto mb-8 object-cover border-4 border-[#22c55e] shadow-2xl shadow-green-500/20" 
+  src="/entrenamiento-intensidad.jpg" 
+  alt="Mi Enfoque" 
+  className="w-[90%] max-w-[500px] mx-auto rounded-2xl mb-12 opacity-90 border border-white/10 shadow-2xl block" 
 />
    
     {/* TEXTO PRINCIPAL */}

@@ -357,6 +357,52 @@ export default function Page() {
             </p>
           </div> {/* <-- Este cierra el max-w-2xl */}
         </section>
+
+{/* SECCIÓN: MITO VS REALIDAD */}
+<section id="mitos" className="py-20 px-6 bg-black scroll-mt-20">
+  <div className="max-w-4xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold uppercase italic mb-4">
+        Mitos vs. Realidad
+      </h2>
+      <p className="text-gray-400">Cortemos con los chamuyos que no te dejan avanzar.</p>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-2">
+      {[
+        {
+          mito: "Si entreno pesado me voy a poner como un patovica.",
+          realidad: "Ni ahí. Entrenar fuerza te va a dar un cuerpo firme y atlético. Ganar un volumen gigante lleva años de dieta y suplementación extrema."
+        },
+        {
+          mito: "Matarse a abdominales quema la grasa de la panza.",
+          realidad: "Olvidate, no existe quemar grasa en un solo lugar. La clave es el déficit calórico y un entrenamiento que te haga mover todo el cuerpo."
+        },
+        {
+          mito: "Tengo que vivir a lechuga y pollo para ver cambios.",
+          realidad: "Esa es la forma más rápida de abandonar. La posta es comer de todo en las cantidades justas para que puedas mantenerlo en el tiempo."
+        },
+        {
+          mito: "El cardio es lo único que sirve para bajar la panza.",
+          realidad: "El cardio ayuda, pero los fierros son los que aceleran el metabolismo. Cuanto más músculo tenés, más grasa quemás incluso estando sentado."
+        }
+      ].map((item, index) => (
+        <div key={index} className="bg-[#111827] p-6 rounded-2xl border border-[#334155]/30 hover:border-[#22c55e]/50 transition-all shadow-lg shadow-green-500/5">
+          <div className="flex flex-col h-full">
+            <div className="mb-4">
+              <span className="text-red-500 font-bold uppercase text-[10px] tracking-widest bg-red-500/10 px-2 py-1 rounded">El chamuyo</span>
+              <p className="text-white font-semibold mt-3 italic text-[17px]">"{item.mito}"</p>
+            </div>
+            <div className="mt-auto border-t border-[#334155]/30 pt-4">
+              <span className="text-[#22c55e] font-bold uppercase text-[10px] tracking-widest bg-[#22c55e]/10 px-2 py-1 rounded">La posta</span>
+              <p className="text-gray-400 mt-3 text-[15px] leading-relaxed">{item.realidad}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
        
 {/* SECCIÓN: PREGUNTAS FRECUENTES (FAQ) */}
 <section id="faq" className="py-20 px-6 bg-black border-t border-[#334155]/20 scroll-mt-20">

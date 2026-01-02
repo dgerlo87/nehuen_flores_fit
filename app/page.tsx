@@ -45,14 +45,14 @@ export default function Page() {
     }}
   />
 
-  {/* LOGO (Margen izquierdo superior) */}
-  <div className="absolute top-6 left-6 z-20">
-    <img 
-      src="/IMG-20251216-WA0001.jpg" 
-      alt="Logo Nehuen Fit" 
-      className="h-12 md:h-16 w-auto object-contain drop-shadow-[0_0_8px_rgba(34,197,94,0.4)]" 
-    />
-  </div>
+ {/* LOGO AJUSTADO */}
+<div className="relative z-20 flex items-center">
+  <img 
+    src="/IMG-20251216-WA0001.jpg" 
+    alt="Logo Nehuen Fit" 
+    className="h-14 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.5)] transition-transform hover:scale-105" 
+  />
+</div>
 
   {/* CONTENIDO PRINCIPAL */}
   <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">

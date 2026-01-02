@@ -167,11 +167,10 @@ export default function Page() {
 
 </section>
 
-       {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
+      {/* SECCIÓN: SOBRE MÍ / CONFIANZA */}
 <section className="py-20 px-6 bg-[#1e293b]/20 border-t border-[#334155]">
   <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
     
-    {/* COLUMNA 1: TU FOTO */}
     <div className="flex justify-center order-2 md:order-1">
       <img 
         src="/coach-nehuen.jpg" 
@@ -180,7 +179,6 @@ export default function Page() {
       />
     </div>
 
-    {/* COLUMNA 2: TU TEXTO */}
     <div className="text-center md:text-left order-1 md:order-2">
       <h2 className="text-[#22c55e] text-[28px] md:text-[32px] font-bold mb-8 uppercase italic">
         Entrená con confianza

@@ -84,7 +84,6 @@ export default function Page() {
               ⏱️ Te lleva menos de 1 minuto
             </p>
           </div>
-        </div>
       </section>
 
       {/* SECCIÓN: ¿QUÉ VAS A ENCONTRAR? */}
@@ -483,7 +482,7 @@ export default function Page() {
           </div>
         )}
 
-        {/* PASO 3: CONTACTO */}
+       {/* PASO 3: CONTACTO */}
         {paso === 3 && (
           <div className="flex flex-col gap-5">
             <textarea name="lesion" placeholder="¿Tenés alguna lesión?" className="p-4 rounded-xl bg-[#0f172a] border border-[#334155] outline-none focus:border-[#22c55e] text-white h-24 resize-none" />
@@ -495,9 +494,8 @@ export default function Page() {
           </div>
         )}
       </form>
-    </div>
-  </section>
-
+    </div> {/* Este cierra el div del fondo del formulario */}
+  </section> {/* Este cierra la sección del formulario */}
       
 
                     {/* FOOTER */}

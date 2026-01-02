@@ -10,22 +10,39 @@ export default function Page() {
     <div className="min-h-screen bg-black text-white scroll-smooth">
       <div className="max-w-full mx-auto">
 
-<header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-[#334155]/20">
-  <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    {/* Tu Logo */}
-    <div className="text-[#22c55e] font-black text-xl tracking-tighter">
-      NEHUEN<span className="text-white">FIT</span>
+<header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+  <nav className="max-w-6xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
+    
+    {/* LA MARCA COMPLETA (LOGO + TEXTO JUNTOS) */}
+    <div className="flex items-center gap-3">
+      <img 
+        src="/IMG-20251216-WA0001.jpg" 
+        alt="Logo Nehuen Fit" 
+        className="h-10 w-10 md:h-12 md:w-12 rounded-full object-cover border-2 border-[#22c55e]"
+      />
+      <div className="flex flex-col justify-center">
+        <span className="text-[#22c55e] font-black text-lg md:text-xl leading-none italic tracking-tighter">
+          NEHUEN<span className="text-white">FIT</span>
+        </span>
+        <span className="text-gray-500 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] leading-tight">
+          Personal Trainer
+        </span>
+      </div>
     </div>
 
-    {/* Menú de Navegación - Solo visible en Desktop, oculto en móviles para no molestar */}
-    <div className="hidden md:flex items-center gap-8">
-      <a href="#beneficios" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">Beneficios</a>
-      <a href="#testimonios" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">Testimonios</a>
-      <a href="#faq" className="text-sm font-medium text-[#9ca3af] hover:text-[#22c55e] transition-colors">FAQ</a>
-      <a href="#formulario" className="bg-[#22c55e] text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-[#16a34a] transition-all">
-        EMPEZAR AHORA
-      </a>
+    {/* LOS LINKS (Beneficios, Mitos, etc.) */}
+    <div className="hidden md:flex items-center gap-6">
+      <a href="#beneficios" className="text-sm font-medium text-gray-400 hover:text-[#22c55e] transition-colors">Beneficios</a>
+      <a href="#testimonios" className="text-sm font-medium text-gray-400 hover:text-[#22c55e] transition-colors">Testimonios</a>
+      <a href="#mitos" className="text-sm font-medium text-gray-400 hover:text-[#22c55e] transition-colors">La Posta</a>
+      <a href="#faq" className="text-sm font-medium text-gray-400 hover:text-[#22c55e] transition-colors">FAQ</a>
     </div>
+
+    {/* BOTÓN DE ACCIÓN */}
+    <a href="#formulario" className="bg-[#22c55e] text-black px-4 py-2 rounded-full font-bold text-xs md:text-sm hover:bg-[#1da850] transition-transform active:scale-95 shadow-lg shadow-green-500/20">
+      EMPEZAR AHORA
+    </a>
+
   </nav>
 </header>
        
@@ -45,27 +62,6 @@ export default function Page() {
     }}
   />
 
- {/* LOGO AJUSTADO */}
-<div className="relative z-20 flex items-center">
-  <img 
-    src="/IMG-20251216-WA0001.jpg" 
-    alt="Logo Nehuen Fit" 
-    className="h-14 md:h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.5)] transition-transform hover:scale-105" 
-  />
-</div>
-
-  {/* CONTENIDO PRINCIPAL */}
-  <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-    
-    {/* MARCA (Arriba) */}
-    <div className="mb-4">
-      <span className="block text-[#9ca3af] text-[18px] md:text-[22px] font-medium tracking-tight">
-        Nehuen Fit
-      </span>
-      <span className="block text-[#9ca3af] text-[18px] md:text-[22px] font-medium">
-        Personal Trainer
-      </span>
-    </div>
 
     {/* TÍTULO PRINCIPAL */}
     <h1 className="text-[#22c55e] text-[28px] md:text-[48px] leading-tight font-bold mb-6 max-w-3xl">
